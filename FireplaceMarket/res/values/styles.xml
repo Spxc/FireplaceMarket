@@ -1,0 +1,35 @@
+<resources>
+
+    <style name="AppTheme" parent="android:Theme.Light" />
+    
+    <style name="Theme.amoCrm" parent="Holo.Theme.Light">
+    <item name="actionBarStyle">@style/Widget.amoCrm.ActionBar</item>
+    <item name="android:actionBarStyle">@style/Widget.amoCrm.ActionBar</item>
+    
+    <item name="actionBarSplitStyle">@style/Widget.amoCrm.ActionBar</item>
+    <item name="android:actionBarSplitStyle">@style/Widget.amoCrm.ActionBar</item>
+    
+    <item name="actionBarDivider">@drawable/actionbar_divider</item>
+    <item name="android:actionBarDivider">@drawable/actionbar_divider</item>
+    <item name="dividerVertical">@drawable/actionbar_divider</item>
+</style>
+
+<style name="Widget.amoCrm.ActionBar" parent="Widget.Sherlock.ActionBar">
+    <item name="background">@drawable/actionbar_bg</item>
+    <item name="android:background">@drawable/actionbar_bg</item>
+
+    <item name="android:logo">@drawable/ic_action_menu</item>
+    <item name="logo">@drawable/ic_action_menu</item>
+
+    <item name="actionBarDivider">@drawable/actionbar_divider</item>
+    <item name="android:actionBarDivider">@drawable/actionbar_divider</item>
+    <item name="dividerVertical">@drawable/actionbar_divider</item>
+
+    <item name="divider">@drawable/actionbar_divider</item>
+    <item name="android:divider">@drawable/actionbar_divider</item>
+
+    <item name="itemPadding">15dp</item>
+    <item name="android:itemPadding">15dp</item>
+</style>
+
+</resources>
