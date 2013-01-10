@@ -37,7 +37,12 @@
         </activity>
         <activity 
             android:name=".ApplicationsActivity"
-            android:label="@string/StorageActivity"
+            android:label="@string/AppsActivity"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity 
+            android:name=".RepositoriesActivity"
+            android:label="@string/ReposActivity"
             android:windowSoftInputMode="stateHidden" >
         </activity>
     </application>

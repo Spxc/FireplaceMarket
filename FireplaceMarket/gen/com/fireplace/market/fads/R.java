@@ -1870,6 +1870,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int Gray=0x7f090097;
         public static final int Green=0x7f0900c5;
         public static final int GreenYellow=0x7f090084;
+        public static final int HoloBlue=0x7f0900cc;
         public static final int Honeydew=0x7f090060;
         public static final int HotPink=0x7f09004c;
         public static final int IndianRed=0x7f090079;
@@ -1978,10 +1979,10 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int abs__bright_foreground_inverse_holo_dark=0x7f090006;
         public static final int abs__bright_foreground_inverse_holo_light=0x7f090007;
         public static final int abs__holo_blue_light=0x7f090008;
-        public static final int abs__primary_text_disable_only_holo_dark=0x7f0900cc;
-        public static final int abs__primary_text_disable_only_holo_light=0x7f0900cd;
-        public static final int abs__primary_text_holo_dark=0x7f0900ce;
-        public static final int abs__primary_text_holo_light=0x7f0900cf;
+        public static final int abs__primary_text_disable_only_holo_dark=0x7f0900cd;
+        public static final int abs__primary_text_disable_only_holo_light=0x7f0900ce;
+        public static final int abs__primary_text_holo_dark=0x7f0900cf;
+        public static final int abs__primary_text_holo_light=0x7f0900d0;
         public static final int background_dark=0x7f090014;
         public static final int background_holo_dark=0x7f09001e;
         public static final int background_holo_light=0x7f09001f;
@@ -2044,18 +2045,18 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int holo_red_light=0x7f09000b;
         public static final int link_text_holo_dark=0x7f090032;
         public static final int link_text_holo_light=0x7f090033;
-        public static final int primary_text_disable_only_holo_dark=0x7f0900d0;
-        public static final int primary_text_disable_only_holo_light=0x7f0900d1;
-        public static final int primary_text_holo_dark=0x7f0900d2;
-        public static final int primary_text_holo_light=0x7f0900d3;
-        public static final int primary_text_nodisable_holo_dark=0x7f0900d4;
-        public static final int primary_text_nodisable_holo_light=0x7f0900d5;
-        public static final int secondary_text_holo_dark=0x7f0900d6;
-        public static final int secondary_text_holo_light=0x7f0900d7;
-        public static final int secondary_text_nodisable_holo_dark=0x7f0900d8;
-        public static final int secondary_text_nodisable_holo_light=0x7f0900d9;
-        public static final int tertiary_text_holo_dark=0x7f0900da;
-        public static final int tertiary_text_holo_light=0x7f0900db;
+        public static final int primary_text_disable_only_holo_dark=0x7f0900d1;
+        public static final int primary_text_disable_only_holo_light=0x7f0900d2;
+        public static final int primary_text_holo_dark=0x7f0900d3;
+        public static final int primary_text_holo_light=0x7f0900d4;
+        public static final int primary_text_nodisable_holo_dark=0x7f0900d5;
+        public static final int primary_text_nodisable_holo_light=0x7f0900d6;
+        public static final int secondary_text_holo_dark=0x7f0900d7;
+        public static final int secondary_text_holo_light=0x7f0900d8;
+        public static final int secondary_text_nodisable_holo_dark=0x7f0900d9;
+        public static final int secondary_text_nodisable_holo_light=0x7f0900da;
+        public static final int tertiary_text_holo_dark=0x7f0900db;
+        public static final int tertiary_text_holo_light=0x7f0900dc;
         public static final int transparent=0x7f090013;
     }
     public static final class dimen {
@@ -2947,7 +2948,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int roboto_regular=0x7f060004;
     }
     public static final class string {
-        public static final int SearchActivity=0x7f0c0034;
+        public static final int AppsActivity=0x7f0c0034;
+        public static final int ReposActivity=0x7f0c0035;
+        public static final int SearchActivity=0x7f0c0036;
         public static final int SettingsActivity=0x7f0c0032;
         public static final int StorageActivity=0x7f0c0033;
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
@@ -3000,10 +3003,10 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int candidates_style=0x7f0c0010;
         public static final int capital_off=0x7f0c0011;
         public static final int capital_on=0x7f0c0012;
-        public static final int changelog_full_title=0x7f0c0035;
-        public static final int changelog_ok_button=0x7f0c0037;
-        public static final int changelog_show_full=0x7f0c0038;
-        public static final int changelog_title=0x7f0c0036;
+        public static final int changelog_full_title=0x7f0c0037;
+        public static final int changelog_ok_button=0x7f0c0039;
+        public static final int changelog_show_full=0x7f0c003a;
+        public static final int changelog_title=0x7f0c0038;
         public static final int date_picker_decrement_day_button=0x7f0c0013;
         public static final int date_picker_decrement_month_button=0x7f0c0014;
         public static final int date_picker_decrement_year_button=0x7f0c0015;

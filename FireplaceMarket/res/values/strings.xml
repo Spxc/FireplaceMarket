@@ -6,6 +6,8 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="SettingsActivity">SettingsActivity</string>
     <string name="StorageActivity">StorageActivity</string>
+    <string name="AppsActivity">SettingsActivity</string>
+    <string name="ReposActivity">SettingsActivity</string>
     <string name="SearchActivity">SearchActivity</string>
 	<string name="changelog_full_title">Change Log</string>
     <string name="changelog_title">What\'s New</string>

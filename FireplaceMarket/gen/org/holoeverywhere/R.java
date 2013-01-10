@@ -8,13 +8,8 @@ package org.holoeverywhere;
 
 public final class R {
 	public static final class raw {
-<<<<<<< HEAD
-		public static final int roboto_regular = 0x7f060004;
-		public static final int roboto_bold = 0x7f060001;
-=======
 		public static final int roboto_bold = 0x7f060001;
 		public static final int roboto_regular = 0x7f060004;
->>>>>>> Updates HoloEverywhere
 		public static final int roboto_bolditalic = 0x7f060002;
 		public static final int roboto_italic = 0x7f060003;
 	}
@@ -34,13 +29,8 @@ public final class R {
 		public static final int abs__max_action_buttons = 0x7f0b0000;
 		public static final int config_shortAnimTime = 0x7f0b0003;
 		public static final int preference_screen_header_scrollbarStyle = 0x7f0b0006;
-<<<<<<< HEAD
-		public static final int preference_fragment_scrollbarStyle = 0x7f0b0007;
-		public static final int config_activityShortDur = 0x7f0b0001;
-=======
 		public static final int config_activityShortDur = 0x7f0b0001;
 		public static final int preference_fragment_scrollbarStyle = 0x7f0b0007;
->>>>>>> Updates HoloEverywhere
 		public static final int preferences_right_pane_weight = 0x7f0b0009;
 		public static final int config_longAnimTime = 0x7f0b0005;
 		public static final int config_mediumAnimTime = 0x7f0b0004;
@@ -341,13 +331,8 @@ public final class R {
 		public static final int ProgressBar_android_indeterminateDrawable = 7;
 		public static final int SherlockActionBar_divider = 5;
 		public static final int SherlockMenuItem_android_visible = 4;
-<<<<<<< HEAD
-		public static final int TextAppearance_android_textColor = 3;
-		public static final int AlertDialog_bottomMedium = 9;
-=======
 		public static final int AlertDialog_bottomMedium = 9;
 		public static final int TextAppearance_android_textColor = 3;
->>>>>>> Updates HoloEverywhere
 		public static final int RingtonePreference_showDefault = 1;
 		public static final int PreferenceFrameLayout_borderTop = 0;
 		public static final int LinearLayout_android_dividerPadding = 2;
@@ -817,13 +802,8 @@ public final class R {
 		public static final int progress_bg_holo_light = 0x7f020145;
 		public static final int textfield_disabled_focused_holo_light = 0x7f0201ac;
 		public static final int switch_bg_disabled_holo_light = 0x7f02018f;
-<<<<<<< HEAD
-		public static final int abs__tab_selected_holo = 0x7f020060;
-		public static final int abs__cab_background_bottom_holo_dark = 0x7f02001a;
-=======
 		public static final int abs__cab_background_bottom_holo_dark = 0x7f02001a;
 		public static final int abs__tab_selected_holo = 0x7f020060;
->>>>>>> Updates HoloEverywhere
 		public static final int btn_radio_holo_light = 0x7f0200b5;
 		public static final int textfield_multiline_activated_holo_dark = 0x7f0201b1;
 		public static final int btn_radio_on_disabled_holo_dark = 0x7f0200c4;
@@ -1182,17 +1162,10 @@ public final class R {
 		public static final int abs__action_bar_title_text_size = 0x7f0a0003;
 	}
 	public static final class interpolator {
-<<<<<<< HEAD
-		public static final int decelerate_cubic = 0x7f050001;
-		public static final int accelerate_quad = 0x7f050000;
-		public static final int decelerate_quint = 0x7f050003;
-		public static final int decelerate_quad = 0x7f050002;
-=======
 		public static final int decelerate_quad = 0x7f050002;
 		public static final int decelerate_cubic = 0x7f050001;
 		public static final int accelerate_quad = 0x7f050000;
 		public static final int decelerate_quint = 0x7f050003;
->>>>>>> Updates HoloEverywhere
 	}
 	public static final class id {
 		public static final int switchWidget = 0x7f07009a;
@@ -1316,13 +1289,8 @@ public final class R {
 		public static final int dialog = 0x7f070029;
 		public static final int timePicker = 0x7f0700a2;
 		public static final int title_template = 0x7f070063;
-<<<<<<< HEAD
-		public static final int all = 0x7f070021;
-		public static final int button1 = 0x7f070070;
-=======
 		public static final int button1 = 0x7f070070;
 		public static final int all = 0x7f070021;
->>>>>>> Updates HoloEverywhere
 		public static final int top = 0x7f070010;
 		public static final int secondaryProgress = 0x7f07002e;
 		public static final int music = 0x7f070025;
@@ -1592,24 +1560,24 @@ public final class R {
 		public static final int background_holo_dark = 0x7f09001e;
 		public static final int bright_foreground_disabled_holo_dark = 0x7f090022;
 		public static final int bright_foreground_inverse_holo_dark = 0x7f090024;
-		public static final int secondary_text_holo_light = 0x7f0900d7;
+		public static final int secondary_text_holo_light = 0x7f0900d8;
 		public static final int abs__bright_foreground_disabled_holo_dark = 0x7f090004;
-		public static final int primary_text_holo_light = 0x7f0900d3;
-		public static final int primary_text_nodisable_holo_light = 0x7f0900d5;
+		public static final int primary_text_holo_light = 0x7f0900d4;
+		public static final int primary_text_nodisable_holo_light = 0x7f0900d6;
 		public static final int holo_green_dark = 0x7f09000d;
-		public static final int tertiary_text_holo_light = 0x7f0900db;
+		public static final int tertiary_text_holo_light = 0x7f0900dc;
 		public static final int holo_orange_light = 0x7f090010;
 		public static final int holo_blue_light = 0x7f090009;
 		public static final int bright_foreground_dark = 0x7f090016;
 		public static final int abs__bright_foreground_holo_light = 0x7f090003;
-		public static final int abs__primary_text_disable_only_holo_dark = 0x7f0900cc;
+		public static final int abs__primary_text_disable_only_holo_dark = 0x7f0900cd;
 		public static final int abs__bright_foreground_inverse_holo_dark = 0x7f090006;
 		public static final int highlighted_text_holo_dark = 0x7f090030;
-		public static final int secondary_text_nodisable_holo_dark = 0x7f0900d8;
-		public static final int primary_text_nodisable_holo_dark = 0x7f0900d4;
+		public static final int secondary_text_nodisable_holo_dark = 0x7f0900d9;
+		public static final int primary_text_nodisable_holo_dark = 0x7f0900d5;
 		public static final int background_dark = 0x7f090014;
 		public static final int bright_foreground_dark_disabled = 0x7f090018;
-		public static final int secondary_text_holo_dark = 0x7f0900d6;
+		public static final int secondary_text_holo_dark = 0x7f0900d7;
 		public static final int holo_red_dark = 0x7f09000e;
 		public static final int dim_foreground_inverse_holo_dark = 0x7f090028;
 		public static final int dim_foreground_holo_light = 0x7f09002a;
@@ -1617,7 +1585,7 @@ public final class R {
 		public static final int abs__bright_foreground_inverse_holo_light = 0x7f090007;
 		public static final int dim_foreground_dark = 0x7f09001c;
 		public static final int highlighted_text_holo_light = 0x7f090031;
-		public static final int primary_text_holo_dark = 0x7f0900d2;
+		public static final int primary_text_holo_dark = 0x7f0900d3;
 		public static final int dim_foreground_inverse_disabled_holo_light = 0x7f09002d;
 		public static final int dim_foreground_disabled_holo_dark = 0x7f090027;
 		public static final int holo_purple = 0x7f09000f;
@@ -1625,16 +1593,16 @@ public final class R {
 		public static final int bright_foreground_light = 0x7f090017;
 		public static final int dim_foreground_holo_dark = 0x7f090026;
 		public static final int dim_foreground_dark_inverse = 0x7f09001d;
-		public static final int primary_text_disable_only_holo_light = 0x7f0900d1;
+		public static final int primary_text_disable_only_holo_light = 0x7f0900d2;
 		public static final int abs__background_holo_light = 0x7f090001;
-		public static final int abs__primary_text_holo_dark = 0x7f0900ce;
+		public static final int abs__primary_text_holo_dark = 0x7f0900cf;
 		public static final int background_light = 0x7f090015;
 		public static final int link_text_holo_dark = 0x7f090032;
-		public static final int secondary_text_nodisable_holo_light = 0x7f0900d9;
+		public static final int secondary_text_nodisable_holo_light = 0x7f0900da;
 		public static final int transparent = 0x7f090013;
-		public static final int tertiary_text_holo_dark = 0x7f0900da;
+		public static final int tertiary_text_holo_dark = 0x7f0900db;
 		public static final int bright_foreground_holo_dark = 0x7f090020;
-		public static final int abs__primary_text_holo_light = 0x7f0900cf;
+		public static final int abs__primary_text_holo_light = 0x7f0900d0;
 		public static final int dim_foreground_inverse_disabled_holo_dark = 0x7f090029;
 		public static final int bright_foreground_light_disabled = 0x7f090019;
 		public static final int abs__holo_blue_light = 0x7f090008;
@@ -1642,9 +1610,9 @@ public final class R {
 		public static final int holo_blue_bright = 0x7f090012;
 		public static final int bright_foreground_inverse_holo_light = 0x7f090025;
 		public static final int abs__background_holo_dark = 0x7f090000;
-		public static final int primary_text_disable_only_holo_dark = 0x7f0900d0;
+		public static final int primary_text_disable_only_holo_dark = 0x7f0900d1;
 		public static final int bright_foreground_holo_light = 0x7f090021;
-		public static final int abs__primary_text_disable_only_holo_light = 0x7f0900cd;
+		public static final int abs__primary_text_disable_only_holo_light = 0x7f0900ce;
 		public static final int hint_foreground_holo_dark = 0x7f09002e;
 		public static final int background_holo_light = 0x7f09001f;
 		public static final int dim_foreground_disabled_holo_light = 0x7f09002b;
@@ -1715,13 +1683,8 @@ public final class R {
 		public static final int simple_list_item_single_choice = 0x7f030053;
 		public static final int preference_holo = 0x7f03003a;
 		public static final int sherlock_spinner_dropdown_item = 0x7f030048;
-<<<<<<< HEAD
-		public static final int abs__search_dropdown_item_icons_2line = 0x7f030014;
-		public static final int alert_dialog_message = 0x7f03001b;
-=======
 		public static final int alert_dialog_message = 0x7f03001b;
 		public static final int abs__search_dropdown_item_icons_2line = 0x7f030014;
->>>>>>> Updates HoloEverywhere
 		public static final int abs__simple_dropdown_hint = 0x7f030016;
 		public static final int abs__list_menu_item_checkbox = 0x7f03000b;
 		public static final int simple_list_item_multiple_choice = 0x7f030052;
@@ -1756,13 +1719,8 @@ public final class R {
 		public static final int abs__activitychooserview_choose_application = 0x7f0c0007;
 		public static final int date_picker_increment_day_button = 0x7f0c0017;
 		public static final int ringtone_default = 0x7f0c0022;
-<<<<<<< HEAD
-		public static final int abs__action_menu_overflow_description = 0x7f0c0002;
-		public static final int abs__share_action_provider_share_with = 0x7f0c0006;
-=======
 		public static final int abs__share_action_provider_share_with = 0x7f0c0006;
 		public static final int abs__action_menu_overflow_description = 0x7f0c0002;
->>>>>>> Updates HoloEverywhere
 		public static final int number_picker_increment_scroll_mode = 0x7f0c0021;
 		public static final int abs__searchview_description_submit = 0x7f0c000d;
 		public static final int ringtone_silent = 0x7f0c0024;
@@ -1793,17 +1751,10 @@ public final class R {
 	public static final class bool {
 		public static final int preferences_prefer_dual_pane = 0x7f080006;
 		public static final int abs__config_allowActionMenuItemTextWithIcon = 0x7f080005;
-<<<<<<< HEAD
-		public static final int abs__action_bar_expanded_action_views_exclusive = 0x7f080002;
-		public static final int abs__config_showMenuShortcutsWhenKeyboardPresent = 0x7f080003;
-		public static final int abs__action_bar_embed_tabs = 0x7f080000;
-		public static final int abs__split_action_bar_is_narrow = 0x7f080001;
-=======
 		public static final int abs__action_bar_embed_tabs = 0x7f080000;
 		public static final int abs__config_showMenuShortcutsWhenKeyboardPresent = 0x7f080003;
 		public static final int abs__split_action_bar_is_narrow = 0x7f080001;
 		public static final int abs__action_bar_expanded_action_views_exclusive = 0x7f080002;
->>>>>>> Updates HoloEverywhere
 		public static final int abs__config_actionMenuItemAllCaps = 0x7f080004;
 	}
 }

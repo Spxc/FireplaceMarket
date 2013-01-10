@@ -56,13 +56,6 @@ public class SlidingMenuItemDao {
 		
 		item = new SlidingMenuItem();
 		item.setIcon(BitmapFactory.decodeResource(mContext.getResources(),
-				R.drawable.ic_launcher));
-		item.setTitle("Apps");
-		item.setTarget(ApplicationsActivity.class.getName());
-		list.add(item);
-		
-		item = new SlidingMenuItem();
-		item.setIcon(BitmapFactory.decodeResource(mContext.getResources(),
 				R.drawable.ic_action_storage));
 		item.setTitle("Sections");
 		item.setTarget(StorageActivity.class.getName());

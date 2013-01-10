@@ -64,9 +64,10 @@ public class SettingsActivity extends FireplaceController {
 	    		    case 3:
 	    		    	Toast.makeText(SettingsActivity.this,
 	    						"Manage Repos", Toast.LENGTH_LONG).show();
+	    		    	Intent i = new Intent(getBaseContext(), RepositoriesActivity.class);                      
+	    		    	startActivity(i);
 	    		        break;
 	    		    case 4:
-	    		    	//ChangelogDialog();
 	    		    	SettingsActivity.this.cl.getFullLogDialog().show();
 	    		        break;
 	    		    case 5:
