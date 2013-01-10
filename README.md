@@ -7,6 +7,9 @@ Fireplace is going to be a third party application store, it will be like Cydia 
 
 Changelog
 =========
+Commit: 67af372e1db1cc56393b01980cd4109fd90d702f
+* Implemented Viewflow
+
 Commit: 530509b88ca47ddaab8b80b873a846abb158bc38
 * Tweaked colors of the menu
 
