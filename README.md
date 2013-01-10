@@ -7,6 +7,9 @@ Fireplace is going to be a third party application store, it will be like Cydia 
 
 Changelog
 =========
+Commit: 530509b88ca47ddaab8b80b873a846abb158bc38
+* Tweaked colors of the menu
+
 Commit: 16caadd081afc321c2d7e8f33c35496613db399a
 * Added HoloEverywhere
 * Implemented HoloEverywhere
