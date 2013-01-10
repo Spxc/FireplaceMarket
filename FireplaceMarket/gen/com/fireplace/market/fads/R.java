@@ -2949,8 +2949,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     }
     public static final class string {
         public static final int AppsActivity=0x7f0c0034;
+        public static final int DetailedAppsActivity=0x7f0c0036;
         public static final int ReposActivity=0x7f0c0035;
-        public static final int SearchActivity=0x7f0c0036;
+        public static final int SearchActivity=0x7f0c0037;
         public static final int SettingsActivity=0x7f0c0032;
         public static final int StorageActivity=0x7f0c0033;
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
@@ -3003,10 +3004,10 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int candidates_style=0x7f0c0010;
         public static final int capital_off=0x7f0c0011;
         public static final int capital_on=0x7f0c0012;
-        public static final int changelog_full_title=0x7f0c0037;
-        public static final int changelog_ok_button=0x7f0c0039;
-        public static final int changelog_show_full=0x7f0c003a;
-        public static final int changelog_title=0x7f0c0038;
+        public static final int changelog_full_title=0x7f0c0038;
+        public static final int changelog_ok_button=0x7f0c003a;
+        public static final int changelog_show_full=0x7f0c003b;
+        public static final int changelog_title=0x7f0c0039;
         public static final int date_picker_decrement_day_button=0x7f0c0013;
         public static final int date_picker_decrement_month_button=0x7f0c0014;
         public static final int date_picker_decrement_year_button=0x7f0c0015;
