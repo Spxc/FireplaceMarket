@@ -1,0 +1,6 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/add_repo_button"
+          android:title="Add repo"
+          android:icon="@drawable/actionbar_add"
+          android:showAsAction="always|withText" />
+</menu>

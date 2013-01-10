@@ -3,21 +3,16 @@ package com.fireplace.market.fads;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import org.taptwo.android.widget.TitleFlowIndicator;
 import org.taptwo.android.widget.ViewFlow;
-import org.taptwo.android.widget.ViewFlow.ViewSwitchListener;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.MenuItem;
 import com.fireplace.market.fads.adapter.DiffAdapter;
-import com.fireplace.market.fads.controller.FireplaceController;
 
 public class DetailedAppsActivity extends SherlockActivity{
 	

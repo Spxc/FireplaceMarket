@@ -62,10 +62,8 @@ public class SettingsActivity extends FireplaceController {
 	    						"Refresh", Toast.LENGTH_LONG).show();
 	    		        break;
 	    		    case 3:
-	    		    	Toast.makeText(SettingsActivity.this,
-	    						"Manage Repos", Toast.LENGTH_LONG).show();
-	    		    	Intent i = new Intent(getBaseContext(), DetailedAppsActivity.class);                      
-	    		    	startActivity(i);
+	    		    	Intent intentRepos = new Intent(getBaseContext(), RepositoriesActivity.class);                      
+	    		    	startActivity(intentRepos);
 	    		        break;
 	    		    case 4:
 	    		    	SettingsActivity.this.cl.getFullLogDialog().show();
@@ -102,14 +100,13 @@ public class SettingsActivity extends FireplaceController {
                
             }
         });
-        
         alertbox.show();
 	}
 	
-	public void AboutDevice(){            
+        public void AboutDevice(){
         AlertDialog.Builder alertbox = new AlertDialog.Builder(this);
-        alertbox.setTitle("About device");
-        alertbox.setMessage("Manufacturer: " + android.os.Build.MANUFACTURER
+        alertbox.setTitle("About device");                                                                                                                                                                
+        alertbox.setMessage("Application v. 3.0.1"
         		+ "\nModel: " + android.os.Build.MODEL
 				+ "\nVersion: " + android.os.Build.VERSION.RELEASE);
         alertbox.setNeutralButton("Ok", new DialogInterface.OnClickListener() {
