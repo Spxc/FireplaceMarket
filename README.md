@@ -80,7 +80,8 @@ Libraries
 * Actionbar Sherlock | By: Jake Wharton | <a href="https://github.com/JakeWharton/ActionBarSherlock">Source</a>
 * Sliding menu | By: Jeremy Feinstein | <a href="https://github.com/jfeinstein10/SlidingMenu">Source</a>
 * HoloEverywhere | By: Christophe Versieux | <a href="https://github.com/ChristopheVersieux/HoloEverywhere">Source</a>
-* Pull to refresh | By: Chris Banes | <a href="https://github.com/chrisbanes/Android-PullToRefresh">Source</a>
+* PullToRefresh | By: Chris Banes | <a href="https://github.com/chrisbanes/Android-PullToRefresh">Source</a>
+* ViewFlow | By: Patrik Åkerfeldt | <a href="https://github.com/pakerfeldt/android-viewflow">Source</a>
 
 <br>
 
