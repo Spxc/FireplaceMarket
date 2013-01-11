@@ -7,6 +7,10 @@ Fireplace is going to be a third party application store, it will be like Cydia 
 
 Changelog
 =========
+Commit: 5748c07f311de1a3c99ba87f07bcb5ec0ae02ed0
+* Fixed repositories
+* Added Sqlite database
+
 Commit: 67af372e1db1cc56393b01980cd4109fd90d702f
 * Implemented Viewflow
 
