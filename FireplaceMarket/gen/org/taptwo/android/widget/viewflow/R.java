@@ -8,15 +8,15 @@ package org.taptwo.android.widget.viewflow;
 
 public final class R {
 	public static final class id {
-		public static final int stroke = 0x7f070000;
-		public static final int fill = 0x7f070001;
+		public static final int stroke = 0x7f07000c;
+		public static final int fill = 0x7f07000d;
 	}
 	public static final class string {
-		public static final int hello = 0x7f080000;
-		public static final int app_name = 0x7f080001;
+		public static final int hello = 0x7f090006;
+		public static final int app_name = 0x7f090007;
 	}
 	public static final class styleable {
-		public static final int[] ViewFlow = { 0x7f010000 };
+		public static final int[] ViewFlow = { 0x7f010013 };
 		public static final int TitleFlowIndicator_footerColor = 8;
 		public static final int CircleFlowIndicator_centered = 3;
 		public static final int CircleFlowIndicator_radius = 2;
@@ -25,7 +25,7 @@ public final class R {
 		public static final int TitleFlowIndicator_customTypeface = 10;
 		public static final int CircleFlowIndicator_fadeOut = 4;
 		public static final int TitleFlowIndicator_textSize = 6;
-		public static final int[] TitleFlowIndicator = { 0x7f010008, 0x7f010009, 0x7f01000a, 0x7f01000b, 0x7f01000c, 0x7f01000d, 0x7f01000e, 0x7f01000f, 0x7f010010, 0x7f010011, 0x7f010012 };
+		public static final int[] TitleFlowIndicator = { 0x7f01001b, 0x7f01001c, 0x7f01001d, 0x7f01001e, 0x7f01001f, 0x7f010020, 0x7f010021, 0x7f010022, 0x7f010023, 0x7f010024, 0x7f010025 };
 		public static final int TitleFlowIndicator_selectedBold = 3;
 		public static final int ViewFlow_sidebuffer = 0;
 		public static final int CircleFlowIndicator_activeColor = 0;
@@ -37,30 +37,30 @@ public final class R {
 		public static final int TitleFlowIndicator_titlePadding = 0;
 		public static final int TitleFlowIndicator_selectedSize = 4;
 		public static final int TitleFlowIndicator_textColor = 5;
-		public static final int[] CircleFlowIndicator = { 0x7f010001, 0x7f010002, 0x7f010003, 0x7f010004, 0x7f010005, 0x7f010006, 0x7f010007 };
+		public static final int[] CircleFlowIndicator = { 0x7f010014, 0x7f010015, 0x7f010016, 0x7f010017, 0x7f010018, 0x7f010019, 0x7f01001a };
 	}
 	public static final class drawable {
-		public static final int icon = 0x7f020123;
+		public static final int icon = 0x7f020125;
 	}
 	public static final class attr {
-		public static final int customTypeface = 0x7f010012;
-		public static final int centered = 0x7f010004;
-		public static final int textColor = 0x7f01000d;
-		public static final int activeType = 0x7f010007;
-		public static final int inactiveColor = 0x7f010002;
-		public static final int sidebuffer = 0x7f010000;
-		public static final int fadeOut = 0x7f010005;
-		public static final int clipPadding = 0x7f010009;
-		public static final int footerColor = 0x7f010010;
-		public static final int textSize = 0x7f01000e;
-		public static final int activeColor = 0x7f010001;
-		public static final int footerTriangleHeight = 0x7f010011;
-		public static final int selectedSize = 0x7f01000c;
-		public static final int selectedColor = 0x7f01000a;
-		public static final int footerLineHeight = 0x7f01000f;
-		public static final int inactiveType = 0x7f010006;
-		public static final int radius = 0x7f010003;
-		public static final int titlePadding = 0x7f010008;
-		public static final int selectedBold = 0x7f01000b;
+		public static final int customTypeface = 0x7f010025;
+		public static final int centered = 0x7f010017;
+		public static final int textColor = 0x7f010020;
+		public static final int activeType = 0x7f01001a;
+		public static final int inactiveColor = 0x7f010015;
+		public static final int sidebuffer = 0x7f010013;
+		public static final int fadeOut = 0x7f010018;
+		public static final int clipPadding = 0x7f01001c;
+		public static final int footerColor = 0x7f010023;
+		public static final int textSize = 0x7f010021;
+		public static final int activeColor = 0x7f010014;
+		public static final int footerTriangleHeight = 0x7f010024;
+		public static final int selectedSize = 0x7f01001f;
+		public static final int selectedColor = 0x7f01001d;
+		public static final int footerLineHeight = 0x7f010022;
+		public static final int inactiveType = 0x7f010019;
+		public static final int radius = 0x7f010016;
+		public static final int titlePadding = 0x7f01001b;
+		public static final int selectedBold = 0x7f01001e;
 	}
 }

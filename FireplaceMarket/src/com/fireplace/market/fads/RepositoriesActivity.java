@@ -1,11 +1,9 @@
 package com.fireplace.market.fads;
 
 import org.holoeverywhere.app.AlertDialog;
-import org.holoeverywhere.widget.Toast;
 
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -53,49 +51,20 @@ public class RepositoriesActivity extends SherlockActivity implements OnClickLis
 		
         db.open();
         getRepos();
-        
 	}
-
+	
 	public boolean onOptionsItemSelected(MenuItem item) {
 	    switch (item.getItemId()) {
 	    case android.R.id.home:
 	    	super.finish();
 	        break;
 	    case R.id.add_repo_button:
-        	if (txtUrlRepoView.getVisibility() == View.GONE){
-        		txtUrlRepoView.setVisibility(View.VISIBLE);
-        		btnAddRepo.setVisibility(View.VISIBLE);
-        	}
-        	else{
-        		txtUrlRepoView.setVisibility(View.GONE);
-        		btnAddRepo.setVisibility(View.GONE);
-        	}
-            
+        	addDialog();
             return true;
         default:
             return super.onOptionsItemSelected(item);
 	    }
 		return true;
-	}
-	
-	@Override
-	public void onClick(View v) {
-	switch (v.getId()) {
-	    case R.id.btnAddRepo:
-	    	final EditText txtUrlRepo = (EditText) findViewById(R.id.txtUrlRepo);
-	    	long id;
-            id = db.insertTitle(
-            		txtUrlRepo.getText().toString());
-            Log.d("Add repo", "Added repo " + txtUrlRepo.getText().toString());
-            txtUrlRepo.setText("");
-            InputMethodManager inputManager = (InputMethodManager)
-                    getSystemService(Context.INPUT_METHOD_SERVICE); 
-
-            inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
-                       InputMethodManager.HIDE_NOT_ALWAYS);
-            getRepos();
-            break;
-	    }   
 	}
 	
 	public void getRepos(){
@@ -124,6 +93,7 @@ public class RepositoriesActivity extends SherlockActivity implements OnClickLis
                 		break;
                 	case 1:
                 		Log.d("Edit Repo","Edit repo");
+                		//editDialog();
                 		break;
                 	case 2:
                 		Log.d("Delete Repo","Delete repo");
@@ -148,10 +118,96 @@ public class RepositoriesActivity extends SherlockActivity implements OnClickLis
       });
 	}
 	
+	public void addDialog(){
+	
+	AlertDialog.Builder alert = new AlertDialog.Builder(this);
+
+	alert.setTitle("Add repository");
+	alert.setMessage("Add the url to the server with the right config...");
+
+	// Set an EditText view to get user input 
+	final EditText inputAdd = new EditText(this);
+	alert.setView(inputAdd);
+	alert.setPositiveButton("Add", new DialogInterface.OnClickListener() {
+	public void onClick(DialogInterface dialog, int whichButton) {
+		long id;
+        id = db.insertTitle(
+        		inputAdd.getText().toString());
+        Log.d("Add repo", "Added repo " + inputAdd.getText().toString());
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(inputAdd.getWindowToken(),0); 
+        getRepos();
+		
+	  }
+	});
+
+	alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+	  public void onClick(DialogInterface dialog, int whichButton) {
+	    // Canceled.
+		  InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+	      imm.hideSoftInputFromWindow(inputAdd.getWindowToken(),0); 
+	  }
+	});
+
+	alert.show();
+	}
+	
+	public void editDialog(){
+		
+		AlertDialog.Builder alert = new AlertDialog.Builder(this);
+
+		alert.setTitle("Edit repo");
+		//alert.setMessage("Enter the url of which the software is on!");
+
+		// Set an EditText view to get user input 
+
+		final Cursor c = db.getAllTitles();
+		startManagingCursor(c);
+
+        String[] from = new String[]{DBAdapter.KEY_REPOURL};
+        //int[] to = new int[]{R.id.app_name};
+		
+		final EditText input = new EditText(this);
+		
+		alert.setView(input);
+		//input.setText(c.getString(1));
+		alert.setPositiveButton("Save", new DialogInterface.OnClickListener() {
+		public void onClick(DialogInterface dialog, int whichButton) {
+			InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+	        imm.hideSoftInputFromWindow(input.getWindowToken(),0); 
+			boolean id;
+			if (id = db.updateTitle(c.getLong(1), input.getText().toString()))
+	            Log.d("Update DB", "Updated: " + input.getText().toString());
+			
+			
+	        else
+	            Log.d("Update DB", "Update Failed");
+			getRepos();
+		  }
+		
+		});
+
+		alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+		  public void onClick(DialogInterface dialog, int whichButton) {
+		    // Canceled.
+			  InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+		        imm.hideSoftInputFromWindow(input.getWindowToken(),0); 
+		  }
+		});
+
+		alert.show();
+		}
+	
 	@Override
     public boolean onCreateOptionsMenu(Menu menu) {
        MenuInflater inflater = getSupportMenuInflater();
        inflater.inflate(R.menu.abs_buttons_add, menu);
        return super.onCreateOptionsMenu(menu);
     }
+
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		
+	}
 }
