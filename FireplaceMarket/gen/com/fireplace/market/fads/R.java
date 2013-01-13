@@ -3305,12 +3305,12 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int roboto_regular=0x7f060004;
     }
     public static final class string {
-        public static final int AppsActivity=0x7f09003b;
-        public static final int DetailedAppsActivity=0x7f09003d;
-        public static final int ReposActivity=0x7f09003c;
-        public static final int SearchActivity=0x7f09003e;
-        public static final int SettingsActivity=0x7f090039;
-        public static final int StorageActivity=0x7f09003a;
+        public static final int AppsController=0x7f09003b;
+        public static final int DetailedAppsController=0x7f09003d;
+        public static final int ReposController=0x7f09003c;
+        public static final int SearchController=0x7f09003e;
+        public static final int SettingsController=0x7f090039;
+        public static final int StorageController=0x7f09003a;
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
          */
         public static final int abs__action_bar_home_description=0x7f090008;

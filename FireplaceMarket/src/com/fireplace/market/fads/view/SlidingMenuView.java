@@ -67,10 +67,13 @@ public class SlidingMenuView extends ListView {
 
 	private void onMenuItemClick(String target, Bundle args) {
 		Class<?> className = null;
-		try {
-			className = Class.forName(target);
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
+		if (target != null) {
+			className = null;
+			try {
+				className = Class.forName(target);
+			} catch (ClassNotFoundException e) {
+				e.printStackTrace();
+			}
 		}
 		if (className != null) {
 			Intent intent = new Intent(mContext, className);

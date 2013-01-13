@@ -7,13 +7,17 @@
         android:minSdkVersion="8"
         android:targetSdkVersion="17" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
+        android:name=".FireplaceApplication"
+        android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/Theme.amoCrm"
-        android:allowBackup="true" >
+        android:theme="@style/Theme.amoCrm" >
         <activity
-            android:name=".MainActivity"
+            android:name=".controller.MainController"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,43 +25,34 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity 
-            android:name=".SearchActivity"
-            android:label="@string/SearchActivity" >
+        <activity
+            android:name=".controller.SearchController"
+            android:label="@string/SearchController" >
         </activity>
-        <activity 
-            android:name=".SettingsActivity"
-            android:label="@string/SettingsActivity"
+        <activity
+            android:name=".controller.SettingsController"
+            android:label="@string/SettingsController"
             android:windowSoftInputMode="stateHidden" >
         </activity>
-        <activity 
-            android:name=".StorageActivity"
-            android:label="@string/StorageActivity"
+        <activity
+            android:name=".controller.StorageController"
+            android:label="@string/StorageController"
             android:windowSoftInputMode="stateHidden" >
         </activity>
-        <activity 
-            android:name=".ApplicationsActivity"
-            android:label="@string/AppsActivity"
+        <activity
+            android:name=".controller.ApplicationsController"
+            android:label="@string/AppsController"
             android:windowSoftInputMode="stateHidden" >
         </activity>
-        <activity 
-            android:name=".RepositoriesActivity"
-            android:label="@string/ReposActivity"
+        <activity
+            android:name=".controller.RepositoriesController"
+            android:label="@string/ReposController"
             android:windowSoftInputMode="stateHidden" >
         </activity>
-        <activity 
-            android:name=".DetailedAppsActivity"
-            android:label="@string/DetailedAppsActivity" >
-        </activity>
-        <activity 
-            android:name=".DiffAdapter"
-            android:label="@string/DetailedAppsActivity" >
-        </activity>
-        <activity 
-            android:name=".DBdapter"
-            android:label="@string/DetailedAppsActivity" >
+        <activity
+            android:name=".controller.DetailedAppsController"
+            android:label="@string/DetailedAppsController" >
         </activity>
     </application>
-<uses-permission android:name="android.permission.INTERNET" /> 
-<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
 </manifest>
