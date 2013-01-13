@@ -54,6 +54,10 @@ public class SlidingMenuView extends ListView {
 					.findViewById(R.id.activity_title);
 			title.setText(item.getTitle());
 
+			if (item.getTarget() == null) {
+				convertView.setClickable(false);
+			}
+
 			convertView.setOnClickListener(new OnClickListener() {
 				@Override
 				public void onClick(View v) {

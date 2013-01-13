@@ -13,5 +13,8 @@
 	<string name="changelog_full_title">Change Log</string>
     <string name="changelog_title">What\'s New</string>
     <string name="changelog_ok_button">OK</string>
-    <string name="changelog_show_full">more...</string>
+    <string name="changelog_show_full">more#8230;</string>
+    <strign name="search_label">Search#8230;</strign>
+    <string name="no_network_error">Check your network connection</string>
+    <string name="no_apps_label">Sorry, there are no applications to view</string>
 </resources>

@@ -1,34 +1,100 @@
 package com.fireplace.market.fads.view;
 
 import android.content.Context;
-import android.content.Intent;
-import android.os.Bundle;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.fireplace.market.fads.FireplaceApplication;
 import com.fireplace.market.fads.R;
-import com.fireplace.market.fads.bll.SlidingMenuItem;
+import com.fireplace.market.fads.bll.App;
+import com.fireplace.market.fads.events.Event;
+import com.fireplace.market.fads.events.EventListener;
+import com.fireplace.market.fads.util.ImageFetcher;
+import com.fireplace.market.fads.viewmodel.ApplicationsModel;
+import com.handmark.pulltorefresh.library.PullToRefreshBase;
+import com.handmark.pulltorefresh.library.PullToRefreshListView;
 
-public class ApplicationsView extends ListView {
+public class ApplicationsView extends PullToRefreshListView {
+
+	/**
+	 * The interface to send events from the view to the controller
+	 */
+	public static interface ViewListener {
+		public void onAppClick(App app);
+
+		public void onListViewRefresh();
+	}
+
+	/**
+	 * The listener reference for sending events
+	 */
+	private ViewListener viewListener;
+	private final ApplicationsModel model;
+	private TextView mEmptyView;
+
+	public void setViewListener(ViewListener viewListener) {
+		this.viewListener = viewListener;
+	}
 
 	public ApplicationsView(Context context, AttributeSet attrs) {
 		super(context, attrs);
+		model = ApplicationsModel.getInstance();
 	}
 
-	private Context mContext;
+	/**
+	 * Find our references to the objects in the XML layout
+	 */
+	@Override
+	protected void onFinishInflate() {
+		super.onFinishInflate();
+		setOnRefreshListener(new OnRefreshListener<ListView>() {
+			@Override
+			public void onRefresh(PullToRefreshBase<ListView> refreshView) {
+				viewListener.onListViewRefresh();
+			}
+		});
+		setMode(Mode.BOTH);
+		model.addListener(ApplicationsModel.ChangeEvent.LIST_REFRESH_COMPLETE,
+				refreshListener);
+		LinearLayout emptyLayout = (LinearLayout) View.inflate(getContext(),
+				R.layout.empty, null);
+		mEmptyView = (TextView) emptyLayout.findViewById(android.R.id.empty);
+		setEmptyView(emptyLayout);
+	}
 
-	public class MenuAdapter extends ArrayAdapter<SlidingMenuItem> {
+	public PullToRefreshListView getPullToRefreshListView() {
+		return this;
+	}
 
-		public MenuAdapter(Context context) {
+	public void destroy() {
+		model.removeListener(
+				ApplicationsModel.ChangeEvent.LIST_REFRESH_COMPLETE,
+				refreshListener);
+	}
+
+	private final EventListener refreshListener = new EventListener() {
+		@Override
+		public void onEvent(Event event) {
+			onRefreshComplete();
+			if (getRefreshableView().getAdapter().isEmpty())
+				mEmptyView.setText(getResources().getString(
+						R.string.no_apps_label));
+		}
+	};
+
+	public class AppAdapter extends ArrayAdapter<App> {
+
+		private final ImageFetcher mFetcher;
+
+		public AppAdapter(Context context, ImageFetcher fetcher) {
 			super(context, 0);
-			mContext = context;
+			mFetcher = fetcher;
 		}
 
 		@Override
@@ -36,48 +102,30 @@ public class ApplicationsView extends ListView {
 				ViewGroup parent) {
 			if (convertView == null) {
 				convertView = LayoutInflater.from(getContext()).inflate(
-						R.layout.sliding_menu_item, null);
+						R.layout.app_item, null);
 			}
 
-			final SlidingMenuItem item = getItem(position);
+			final App app = getItem(position);
 
-			ImageView icon = (ImageView) convertView
-					.findViewById(R.id.activity_icon);
-			if (item.getIcon() != null) {
-				icon.setImageBitmap(item.getIcon());
-				icon.setVisibility(View.VISIBLE);
+			ImageView icon = (ImageView) convertView.findViewById(R.id.icon);
+			if (app.getIcon() != null && !("").equals(app.getIcon())) {
+				mFetcher.loadImage(app.getIcon(), icon, false);
 			} else {
-				icon.setVisibility(View.GONE);
+				icon.setImageResource(R.drawable.ic_launcher);
 			}
 
 			TextView title = (TextView) convertView
 					.findViewById(R.id.activity_title);
-			title.setText(item.getTitle());
+			title.setText(app.getLabel());
 
 			convertView.setOnClickListener(new OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					onMenuItemClick(item.getTarget(), item.getBundle());
+					viewListener.onAppClick(app);
 				}
 			});
 
 			return convertView;
-		}
-	}
-
-	private void onMenuItemClick(String target, Bundle args) {
-		Class<?> className = null;
-		try {
-			className = Class.forName(target);
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		}
-		if (className != null) {
-			Intent intent = new Intent(mContext, className);
-			if (args != null && args.getInt(FireplaceApplication.REPO_KEY) != 0) {
-				intent.putExtras(args);
-			}
-			mContext.startActivity(intent);
 		}
 	}
 }

@@ -1,0 +1,17 @@
+<com.fireplace.market.fads.view.ApplicationsView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <EditText
+        android:id="@+id/inputSearchApps"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/search_label"
+        android:inputType="text" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/pull_to_refresh_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+</com.fireplace.market.fads.view.ApplicationsView>

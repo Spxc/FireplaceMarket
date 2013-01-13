@@ -11,6 +11,8 @@ public class FireplaceApplication extends Application {
 	public static final String DATABASE_NAME = "fireplace";
 	public static final Integer DATABASE_VERSION = 1;
 	public static final String REPO_KEY = "repoKey";
+	public static final String APP_KEY = "appKey";
+	public static final String MODEL_KEY = "modelKey";
 
 	public static FireplaceDBHelper mDbHelper;
 

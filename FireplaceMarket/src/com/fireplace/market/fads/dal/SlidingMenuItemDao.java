@@ -11,6 +11,7 @@ import com.fireplace.market.fads.FireplaceApplication;
 import com.fireplace.market.fads.R;
 import com.fireplace.market.fads.bll.Repo;
 import com.fireplace.market.fads.bll.SlidingMenuItem;
+import com.fireplace.market.fads.controller.ApplicationsController;
 import com.fireplace.market.fads.controller.MainController;
 import com.fireplace.market.fads.controller.RepositoriesController;
 import com.fireplace.market.fads.controller.SearchController;
@@ -62,6 +63,13 @@ public class SlidingMenuItemDao {
 				R.drawable.ic_action_storage));
 		item.setTitle("Sections");
 		item.setTarget(StorageController.class.getName());
+		list.add(item);
+
+		item = new SlidingMenuItem();
+		item.setIcon(BitmapFactory.decodeResource(mContext.getResources(),
+				R.drawable.ic_action_storage));
+		item.setTitle("Applications");
+		item.setTarget(ApplicationsController.class.getName());
 		list.add(item);
 
 		item = new SlidingMenuItem();
