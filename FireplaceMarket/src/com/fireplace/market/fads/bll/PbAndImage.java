@@ -1,4 +1,4 @@
-package com.fireplace.market.fads.view;
+package com.fireplace.market.fads.bll;
 
 import android.widget.ImageView; 
 import android.widget.ProgressBar; 

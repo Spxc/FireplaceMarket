@@ -16,9 +16,9 @@ import com.fireplace.market.fads.FireplaceApplication;
 import com.fireplace.market.fads.R;
 import com.fireplace.market.fads.bll.SlidingMenuItem;
 
-public class SlidingMenuView extends ListView {
+public class ApplicationsView extends ListView {
 
-	public SlidingMenuView(Context context, AttributeSet attrs) {
+	public ApplicationsView(Context context, AttributeSet attrs) {
 		super(context, attrs);
 	}
 

@@ -1,17 +1,18 @@
- package com.fireplace.market.fads;
+package com.fireplace.market.fads.controller;
 
 import android.os.Bundle;
 
-import com.fireplace.market.fads.controller.FireplaceController;
+import com.fireplace.market.fads.R;
+import com.fireplace.market.fads.R.layout;
 
-public class SearchActivity extends FireplaceController {
+public class SearchController extends FireplaceController {
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		mSupportActionBar.setDisplayHomeAsUpEnabled(true);
-		mSupportActionBar.setTitle("Fireplace Market");
+		mSupportActionBar.setTitle("Search");
 
 	}
 

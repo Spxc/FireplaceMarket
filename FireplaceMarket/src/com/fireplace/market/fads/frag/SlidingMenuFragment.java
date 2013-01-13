@@ -11,8 +11,8 @@ import android.widget.ListView;
 
 import com.actionbarsherlock.app.SherlockListFragment;
 import com.fireplace.market.fads.R;
+import com.fireplace.market.fads.bll.SlidingMenuItem;
 import com.fireplace.market.fads.dal.SlidingMenuItemDao;
-import com.fireplace.market.fads.model.SlidingMenuItem;
 import com.fireplace.market.fads.view.SlidingMenuView;
 
 public class SlidingMenuFragment extends SherlockListFragment {

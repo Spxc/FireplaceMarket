@@ -1,4 +1,4 @@
-package com.fireplace.market.fads;
+package com.fireplace.market.fads.controller;
 
 import java.io.File;
 import java.io.IOException;
@@ -16,10 +16,12 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.fireplace.market.fads.controller.ChangeLog;
-import com.fireplace.market.fads.controller.FireplaceController;
+import com.fireplace.market.fads.R;
+import com.fireplace.market.fads.R.id;
+import com.fireplace.market.fads.R.layout;
+import com.fireplace.market.fads.bll.ChangeLog;
 
-public class SettingsActivity extends FireplaceController {
+public class SettingsController extends FireplaceController {
 
 	private ListView lvSettingsApp;
 	private ChangeLog cl = null;
@@ -54,19 +56,19 @@ public class SettingsActivity extends FireplaceController {
 	    		    	ClearCache();
 	    		        break;
 	    		    case 1:
-	    		    	Toast.makeText(SettingsActivity.this,
+	    		    	Toast.makeText(SettingsController.this,
 	    						"Reset", Toast.LENGTH_LONG).show();
 	    		        break;
 	    		    case 2:
-	    		    	Toast.makeText(SettingsActivity.this,
+	    		    	Toast.makeText(SettingsController.this,
 	    						"Refresh", Toast.LENGTH_LONG).show();
 	    		        break;
 	    		    case 3:
-	    		    	Intent intentRepos = new Intent(getBaseContext(), RepositoriesActivity.class);                      
+	    		    	Intent intentRepos = new Intent(getBaseContext(), RepositoriesController.class);                      
 	    		    	startActivity(intentRepos);
 	    		        break;
 	    		    case 4:
-	    		    	SettingsActivity.this.cl.getFullLogDialog().show();
+	    		    	SettingsController.this.cl.getFullLogDialog().show();
 	    		        break;
 	    		    case 5:
 	    		    	AboutDialog();
@@ -128,17 +130,17 @@ public class SettingsActivity extends FireplaceController {
 			try {
 				runtime.exec(deleteCmd);
 			} catch (IOException e) {
-				Toast.makeText(SettingsActivity.this,
+				Toast.makeText(SettingsController.this,
 						"Removed", Toast.LENGTH_LONG).show();
 			}
 			
 			dirApps.mkdirs();
-			Toast.makeText(SettingsActivity.this, "Cache has been cleared. " + Environment.getExternalStorageDirectory().getPath()+"/"+getPackageName()+"/", Toast.LENGTH_LONG)
+			Toast.makeText(SettingsController.this, "Cache has been cleared. " + Environment.getExternalStorageDirectory().getPath()+"/"+getPackageName()+"/", Toast.LENGTH_LONG)
 			.show();
 		} else {
 			dirApps.mkdirs();
 			//Log.e("Fireplace directory did not exist, so one was created on sdcard partition.");
-			Toast.makeText(SettingsActivity.this,
+			Toast.makeText(SettingsController.this,
 					"Dir dosent exist", Toast.LENGTH_LONG).show();
 		}
 	}

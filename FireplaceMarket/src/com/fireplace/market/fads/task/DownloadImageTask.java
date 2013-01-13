@@ -2,7 +2,9 @@ package com.fireplace.market.fads.task;
 
 import java.io.InputStream; 
 import java.net.URL; 
-import com.fireplace.market.fads.view.PbAndImage; 
+
+import com.fireplace.market.fads.bll.PbAndImage;
+
 import android.graphics.Bitmap; 
 import android.graphics.BitmapFactory; 
 import android.graphics.Matrix; 

@@ -1,6 +1,7 @@
-package com.fireplace.market.fads.model;
+package com.fireplace.market.fads.bll;
 
 import android.graphics.Bitmap;
+import android.os.Bundle;
 
 public class SlidingMenuItem {
 
@@ -13,15 +14,18 @@ public class SlidingMenuItem {
 		this.target = target;
 	}
 
-	public SlidingMenuItem(Bitmap bitmap, String title, String target) {
+	public SlidingMenuItem(Bitmap bitmap, String title, String target,
+			Bundle bundle) {
 		this.icon = bitmap;
 		this.title = title;
 		this.target = target;
+		this.bundle = bundle;
 	}
 
 	private Bitmap icon;
 	private String title;
 	private String target;
+	private Bundle bundle;
 
 	public Bitmap getIcon() {
 		return icon;
@@ -45,6 +49,14 @@ public class SlidingMenuItem {
 
 	public void setTarget(String target) {
 		this.target = target;
+	}
+
+	public Bundle getBundle() {
+		return bundle;
+	}
+
+	public void setBundle(Bundle bundle) {
+		this.bundle = bundle;
 	}
 
 }

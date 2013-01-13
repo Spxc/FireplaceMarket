@@ -1,14 +1,15 @@
-package com.fireplace.market.fads;
+package com.fireplace.market.fads.controller;
 
 import java.io.File;
 
 import android.os.Bundle;
 import android.os.Environment;
 
-import com.fireplace.market.fads.controller.ChangeLog;
-import com.fireplace.market.fads.controller.FireplaceController;
+import com.fireplace.market.fads.R;
+import com.fireplace.market.fads.R.layout;
+import com.fireplace.market.fads.bll.ChangeLog;
 
-public class MainActivity extends FireplaceController {
+public class MainController extends FireplaceController {
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {

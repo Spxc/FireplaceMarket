@@ -1,4 +1,4 @@
-package com.fireplace.market.fads.controller;
+package com.fireplace.market.fads.bll;
 
 import java.io.BufferedReader;
 import java.io.IOException;

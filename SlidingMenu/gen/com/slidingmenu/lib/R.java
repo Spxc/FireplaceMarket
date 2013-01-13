@@ -1037,7 +1037,6 @@ containing a value of this type.
         public static int abs__textfield_searchview_right_holo_light=0x7f02006e;
         public static int defaultshadow=0x7f02006f;
         public static int defaultshadowright=0x7f020070;
-        public static int shadow=0x7f020071;
     }
     public static final class id {
         public static int abs__action_bar=0x7f040027;

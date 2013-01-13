@@ -59,7 +59,7 @@ public class FireplaceController extends SlidingFragmentActivity {
 	private void setUpMenu() {
 		mSlidingMenu = getSlidingMenu();
 		mSlidingMenu.setShadowWidthRes(R.dimen.shadow_width);
-		mSlidingMenu.setShadowDrawable(R.drawable.shadow);
+		mSlidingMenu.setShadowDrawable(R.drawable.defaultshadow);
 		mSlidingMenu.setBehindOffsetRes(R.dimen.actionbar_home_width);
 		mSlidingMenu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
 		mSlidingMenu.setFadeEnabled(true);

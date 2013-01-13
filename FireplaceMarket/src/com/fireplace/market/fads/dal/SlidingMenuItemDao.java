@@ -5,14 +5,17 @@ import java.util.List;
 
 import android.content.Context;
 import android.graphics.BitmapFactory;
+import android.os.Bundle;
 
-import com.fireplace.market.fads.ApplicationsActivity;
-import com.fireplace.market.fads.MainActivity;
+import com.fireplace.market.fads.FireplaceApplication;
 import com.fireplace.market.fads.R;
-import com.fireplace.market.fads.SearchActivity;
-import com.fireplace.market.fads.SettingsActivity;
-import com.fireplace.market.fads.StorageActivity;
-import com.fireplace.market.fads.model.SlidingMenuItem;
+import com.fireplace.market.fads.bll.Repo;
+import com.fireplace.market.fads.bll.SlidingMenuItem;
+import com.fireplace.market.fads.controller.MainController;
+import com.fireplace.market.fads.controller.RepositoriesController;
+import com.fireplace.market.fads.controller.SearchController;
+import com.fireplace.market.fads.controller.SettingsController;
+import com.fireplace.market.fads.controller.StorageController;
 
 public class SlidingMenuItemDao {
 
@@ -34,39 +37,59 @@ public class SlidingMenuItemDao {
 	 * This is a manual list generation for the menu, currently. It can be
 	 * change to pull from a database or a resource string array.
 	 * 
-	 * @return a list of {@link com.fireplace.market.fads.model.SlidingMenuItem
+	 * @return a list of {@link com.fireplace.market.fads.bll.SlidingMenuItem
 	 *         SlidingMenuItem}'s.
 	 */
 	public List<SlidingMenuItem> getAllSlidingMenuItems() {
 		List<SlidingMenuItem> list = new ArrayList<SlidingMenuItem>();
 		SlidingMenuItem item = new SlidingMenuItem();
-		
+
 		item.setIcon(BitmapFactory.decodeResource(mContext.getResources(),
 				R.drawable.ic_action_search));
 		item.setTitle("Search");
-		item.setTarget(SearchActivity.class.getName());
+		item.setTarget(SearchController.class.getName());
 		list.add(item);
 
 		item = new SlidingMenuItem();
 		item.setIcon(BitmapFactory.decodeResource(mContext.getResources(),
 				R.drawable.ic_launcher));
 		item.setTitle("Home");
-		item.setTarget(MainActivity.class.getName());
+		item.setTarget(MainController.class.getName());
 		list.add(item);
-		
+
 		item = new SlidingMenuItem();
 		item.setIcon(BitmapFactory.decodeResource(mContext.getResources(),
 				R.drawable.ic_action_storage));
 		item.setTitle("Sections");
-		item.setTarget(StorageActivity.class.getName());
+		item.setTarget(StorageController.class.getName());
 		list.add(item);
-		
+
 		item = new SlidingMenuItem();
 		item.setIcon(BitmapFactory.decodeResource(mContext.getResources(),
 				R.drawable.ic_action_settings));
 		item.setTitle("Settings");
-		item.setTarget(SettingsActivity.class.getName());
+		item.setTarget(SettingsController.class.getName());
 		list.add(item);
+
+		item = new SlidingMenuItem();
+		item.setTitle("Manage Repositories");
+		item.setTarget(RepositoriesController.class.getName());
+		list.add(item);
+
+		List<Repo> repoList = Repo.getAll();
+		if (repoList != null) {
+			for (Repo repo : repoList) {
+				item = new SlidingMenuItem();
+				item.setIcon(BitmapFactory.decodeResource(
+						mContext.getResources(), R.drawable.ic_action_settings));
+				item.setTitle(repo.getName());
+				item.setTarget(RepositoriesController.class.getName());
+				Bundle args = new Bundle();
+				args.putInt(FireplaceApplication.REPO_KEY, repo.getId());
+				item.setBundle(args);
+				list.add(item);
+			}
+		}
 
 		return list;
 	}
