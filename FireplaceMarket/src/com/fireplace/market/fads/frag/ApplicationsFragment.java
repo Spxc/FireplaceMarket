@@ -1,5 +1,7 @@
 package com.fireplace.market.fads.frag;
 
+import java.util.List;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,10 +12,16 @@ import android.widget.ListView;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.app.SherlockListFragment;
+import com.fireplace.market.fads.Fireplace;
 import com.fireplace.market.fads.FireplaceApplication;
 import com.fireplace.market.fads.R;
 import com.fireplace.market.fads.bll.App;
 import com.fireplace.market.fads.controller.DetailedAppsController;
+import com.fireplace.market.fads.rest.RestErrorWrapper;
+import com.fireplace.market.fads.task.AppTask;
+import com.fireplace.market.fads.task.AppTask.NewListListener;
+import com.fireplace.market.fads.task.AppTask.OnErrorListener;
+import com.fireplace.market.fads.task.AppTask.TaskCompletionListener;
 import com.fireplace.market.fads.util.ImageCache.ImageCacheParams;
 import com.fireplace.market.fads.util.ImageFetcher;
 import com.fireplace.market.fads.view.ApplicationsView;
@@ -27,6 +35,7 @@ public class ApplicationsFragment extends SherlockListFragment {
 	private static final String IMAGE_CACHE_DIR = "thumbs";
 	private ImageFetcher mImageFetcher;
 	private SherlockFragmentActivity mActivity;
+	private FireplaceApplication mApplication;
 	private ApplicationsView view;
 	private ApplicationsModel model;
 	private AppAdapter adapter;
@@ -56,6 +65,7 @@ public class ApplicationsFragment extends SherlockListFragment {
 				R.dimen.AppImageSize);
 
 		mActivity = getSherlockActivity();
+		mApplication = (FireplaceApplication) mActivity.getApplication();
 
 		ImageCacheParams cacheParams = new ImageCacheParams(mActivity,
 				IMAGE_CACHE_DIR);
@@ -82,7 +92,7 @@ public class ApplicationsFragment extends SherlockListFragment {
 
 		mActivity = (SherlockFragmentActivity) getActivity();
 		adapter = view.new AppAdapter(mActivity, mImageFetcher);
-		setListAdapter(adapter);
+		view.getPullToRefreshListView().setAdapter(adapter);
 
 		if (savedInstanceState == null) {
 			model = ApplicationsModel.getInstance();
@@ -99,7 +109,15 @@ public class ApplicationsFragment extends SherlockListFragment {
 	}
 
 	private void setModelDefaults() {
+		model.setIsSearchShowing(false);
 		model.setAppList(App.getAll());
+		if (Fireplace.IS_HONEYCOMB) {
+			adapter.addAll(model.getAppList());
+		} else {
+			for (App app : model.getAppList()) {
+				adapter.add(app);
+			}
+		}
 	}
 
 	@Override
@@ -130,16 +148,58 @@ public class ApplicationsFragment extends SherlockListFragment {
 	}
 
 	private void refreshAppsFromServer() {
-		// TODO: Implement call to getApps.
-		// TODO: Sub event for handling return of items to add to db.
-		model.setRefreshComplete();
+		AppTask aTask = new AppTask(mApplication, mActivity, "");
+		aTask.setNewListListener(new NewListListener() {
+			@Override
+			public void onAppsReturned(final List<App> appList) {
+				mActivity.runOnUiThread(new Runnable() {
+					@Override
+					public void run() {
+						model.mergeAppList(appList);
+						adapter.clear();
+						if (Fireplace.IS_HONEYCOMB) {
+							adapter.addAll(appList);
+						} else {
+							for (App app : appList) {
+								adapter.add(app);
+							}
+						}
+					}
+				});
+
+			}
+		});
+		aTask.setTaskCompletionListener(new TaskCompletionListener() {
+			@Override
+			public void onTaskFinished() {
+				mActivity.runOnUiThread(new Runnable() {
+					@Override
+					public void run() {
+						model.setRefreshComplete();
+					}
+				});
+			}
+		});
+		aTask.setOnErrorListener(new OnErrorListener() {
+			@Override
+			public void remoteError(final RestErrorWrapper errorWrapper) {
+				mActivity.runOnUiThread(new Runnable() {
+					@Override
+					public void run() {
+						FireplaceApplication.makeToast(mActivity,
+								errorWrapper.getErrorMessage());
+					}
+				});
+			}
+		});
+		aTask.execute();
 	}
 
 	public ViewListener viewListener = new ViewListener() {
 
 		@Override
 		public void onListViewRefresh() {
-			model.setRefreshStarted();
+			// model.setRefreshStarted();
 			refreshAppsFromServer();
 		}
 
@@ -150,4 +210,8 @@ public class ApplicationsFragment extends SherlockListFragment {
 			startActivity(intent);
 		}
 	};
+
+	public void toggleSearchDialog() {
+		model.setIsSearchShowing(!model.getIsSearchShowing());
+	}
 }

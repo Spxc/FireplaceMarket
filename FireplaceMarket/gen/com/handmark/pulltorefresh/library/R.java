@@ -9,33 +9,26 @@ package com.handmark.pulltorefresh.library;
 public final class R {
 	public static final class id {
 		public static final int pullFromStart = 0x7f070001;
-		public static final int pull_to_refresh_progress = 0x7f0700af;
+		public static final int pull_to_refresh_progress = 0x7f0700b0;
 		public static final int rotate = 0x7f070007;
 		public static final int both = 0x7f070003;
 		public static final int webview = 0x7f07000a;
-		public static final int pull_to_refresh_text = 0x7f0700b0;
+		public static final int pull_to_refresh_text = 0x7f0700b1;
 		public static final int pullDownFromTop = 0x7f070005;
 		public static final int gridview = 0x7f070009;
 		public static final int pullUpFromBottom = 0x7f070006;
 		public static final int scrollview = 0x7f07000b;
 		public static final int pullFromEnd = 0x7f070002;
-<<<<<<< HEAD
-		public static final int pull_to_refresh_image = 0x7f0700ad;
-		public static final int fl_inner = 0x7f0700ac;
-		public static final int pull_to_refresh_sub_text = 0x7f0700b0;
-=======
-		public static final int pull_to_refresh_image = 0x7f0700ae;
-		public static final int pull_to_refresh_sub_text = 0x7f0700b1;
-		public static final int fl_inner = 0x7f0700ad;
+		public static final int pull_to_refresh_image = 0x7f0700af;
+		public static final int pull_to_refresh_sub_text = 0x7f0700b2;
+		public static final int fl_inner = 0x7f0700ae;
 		public static final int flip = 0x7f070008;
->>>>>>> Added pullToRefresh to ApplicationsView and also an image cache for the image download.
 		public static final int disabled = 0x7f070000;
-		public static final int flip = 0x7f070008;
 		public static final int manualOnly = 0x7f070004;
 	}
 	public static final class anim {
-		public static final int slide_out_to_bottom = 0x7f04000c;
 		public static final int slide_out_to_top = 0x7f04000d;
+		public static final int slide_out_to_bottom = 0x7f04000c;
 		public static final int slide_in_from_bottom = 0x7f04000a;
 		public static final int slide_in_from_top = 0x7f04000b;
 	}
@@ -48,13 +41,8 @@ public final class R {
 		public static final int pull_to_refresh_from_bottom_release_label = 0x7f090004;
 	}
 	public static final class layout {
-<<<<<<< HEAD
-		public static final int pull_to_refresh_header_horizontal = 0x7f030046;
-		public static final int pull_to_refresh_header_vertical = 0x7f030047;
-=======
 		public static final int pull_to_refresh_header_vertical = 0x7f03004a;
 		public static final int pull_to_refresh_header_horizontal = 0x7f030049;
->>>>>>> Added pullToRefresh to ApplicationsView and also an image cache for the image download.
 	}
 	public static final class styleable {
 		public static final int PullToRefresh_ptrDrawableStart = 7;
@@ -80,9 +68,9 @@ public final class R {
 	}
 	public static final class drawable {
 		public static final int indicator_bg_top = 0x7f020128;
+		public static final int indicator_bg_bottom = 0x7f020127;
 		public static final int default_ptr_flip = 0x7f0200f7;
 		public static final int indicator_arrow = 0x7f020126;
-		public static final int indicator_bg_bottom = 0x7f020127;
 		public static final int default_ptr_rotate = 0x7f0200f8;
 	}
 	public static final class attr {

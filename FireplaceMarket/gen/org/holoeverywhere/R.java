@@ -8,8 +8,8 @@ package org.holoeverywhere;
 
 public final class R {
 	public static final class raw {
-		public static final int roboto_bold = 0x7f060001;
 		public static final int roboto_regular = 0x7f060004;
+		public static final int roboto_bold = 0x7f060001;
 		public static final int roboto_bolditalic = 0x7f060002;
 		public static final int roboto_italic = 0x7f060003;
 	}
@@ -29,8 +29,8 @@ public final class R {
 		public static final int abs__max_action_buttons = 0x7f0c0000;
 		public static final int config_shortAnimTime = 0x7f0c0003;
 		public static final int preference_screen_header_scrollbarStyle = 0x7f0c0006;
-		public static final int config_activityShortDur = 0x7f0c0001;
 		public static final int preference_fragment_scrollbarStyle = 0x7f0c0007;
+		public static final int config_activityShortDur = 0x7f0c0001;
 		public static final int preferences_right_pane_weight = 0x7f0c0009;
 		public static final int config_longAnimTime = 0x7f0c0005;
 		public static final int config_mediumAnimTime = 0x7f0c0004;
@@ -331,8 +331,8 @@ public final class R {
 		public static final int ProgressBar_android_indeterminateDrawable = 7;
 		public static final int SherlockActionBar_divider = 5;
 		public static final int SherlockMenuItem_android_visible = 4;
-		public static final int AlertDialog_bottomMedium = 9;
 		public static final int TextAppearance_android_textColor = 3;
+		public static final int AlertDialog_bottomMedium = 9;
 		public static final int RingtonePreference_showDefault = 1;
 		public static final int PreferenceFrameLayout_borderTop = 0;
 		public static final int LinearLayout_android_dividerPadding = 2;
@@ -749,7 +749,7 @@ public final class R {
 		public static final int btn_toggle_on_disabled_focused_holo_light = 0x7f0200ed;
 		public static final int scrubber_primary_holo = 0x7f02017b;
 		public static final int scrubber_secondary_holo = 0x7f02017e;
-		public static final int transparent = 0x7f0201c1;
+		public static final int transparent = 0x7f0201c2;
 		public static final int dialog_full_holo_light = 0x7f020100;
 		public static final int ratingbar_full_filled_holo_light = 0x7f02016d;
 		public static final int abs__progress_horizontal_holo_dark = 0x7f020049;
@@ -790,7 +790,7 @@ public final class R {
 		public static final int progress_primary_holo_light = 0x7f020152;
 		public static final int textfield_focused_holo_light = 0x7f0201b5;
 		public static final int btn_default_pressed_holo_dark = 0x7f0200a8;
-		public static final int toast_frame = 0x7f0201c0;
+		public static final int toast_frame = 0x7f0201c1;
 		public static final int scrubber_progress_horizontal_holo_light = 0x7f02017d;
 		public static final int abs__search_dropdown_dark = 0x7f020050;
 		public static final int expander_close_holo_light = 0x7f020109;
@@ -802,8 +802,8 @@ public final class R {
 		public static final int progress_bg_holo_light = 0x7f02014b;
 		public static final int textfield_disabled_focused_holo_light = 0x7f0201b1;
 		public static final int switch_bg_disabled_holo_light = 0x7f020194;
-		public static final int abs__cab_background_bottom_holo_dark = 0x7f02001a;
 		public static final int abs__tab_selected_holo = 0x7f020060;
+		public static final int abs__cab_background_bottom_holo_dark = 0x7f02001a;
 		public static final int btn_radio_holo_light = 0x7f0200b5;
 		public static final int textfield_multiline_activated_holo_dark = 0x7f0201b6;
 		public static final int btn_radio_on_disabled_holo_dark = 0x7f0200c4;
@@ -1162,17 +1162,17 @@ public final class R {
 		public static final int abs__action_bar_title_text_size = 0x7f080008;
 	}
 	public static final class interpolator {
-		public static final int decelerate_quad = 0x7f050002;
 		public static final int decelerate_cubic = 0x7f050001;
 		public static final int accelerate_quad = 0x7f050000;
 		public static final int decelerate_quint = 0x7f050003;
+		public static final int decelerate_quad = 0x7f050002;
 	}
 	public static final class id {
-		public static final int switchWidget = 0x7f0700ac;
-		public static final int summary = 0x7f07009f;
+		public static final int switchWidget = 0x7f0700ad;
+		public static final int summary = 0x7f0700a0;
 		public static final int rightSpacer = 0x7f07003e;
 		public static final int buttonPanelTopDivivder = 0x7f07007d;
-		public static final int next_button = 0x7f0700aa;
+		public static final int next_button = 0x7f0700ab;
 		public static final int abs__action_bar_container = 0x7f070057;
 		public static final int abs__default_activity_button = 0x7f07004e;
 		public static final int homeAsUp = 0x7f070014;
@@ -1182,8 +1182,8 @@ public final class R {
 		public static final int abs__action_bar_subtitle = 0x7f070047;
 		public static final int abs__activity_chooser_view_content = 0x7f07004b;
 		public static final int contentPanel = 0x7f070077;
-		public static final int empty = 0x7f0700ab;
-		public static final int year = 0x7f070091;
+		public static final int empty = 0x7f0700ac;
+		public static final int year = 0x7f070092;
 		public static final int showTitle = 0x7f070015;
 		public static final int right = 0x7f070021;
 		public static final int decrement = 0x7f070041;
@@ -1193,15 +1193,15 @@ public final class R {
 		public static final int increment = 0x7f070040;
 		public static final int center_vertical = 0x7f070022;
 		public static final int abs__progress_horizontal = 0x7f07001d;
-		public static final int divider = 0x7f0700bb;
+		public static final int divider = 0x7f0700bc;
 		public static final int atThumb = 0x7f070039;
-		public static final int expanded_menu = 0x7f070093;
+		public static final int expanded_menu = 0x7f070094;
 		public static final int showHome = 0x7f070013;
 		public static final int fill_vertical = 0x7f070023;
 		public static final int system = 0x7f070030;
 		public static final int start = 0x7f070029;
-		public static final int prefs_frame = 0x7f0700a5;
-		public static final int month = 0x7f07008f;
+		public static final int prefs_frame = 0x7f0700a6;
+		public static final int month = 0x7f070090;
 		public static final int bottom = 0x7f07001f;
 		public static final int abs__checkbox = 0x7f070054;
 		public static final int abs__search_close_btn = 0x7f070065;
@@ -1211,40 +1211,40 @@ public final class R {
 		public static final int center_horizontal = 0x7f070024;
 		public static final int abs__action_menu_divider = 0x7f07001a;
 		public static final int abs__icon = 0x7f070050;
-		public static final int month_name = 0x7f070089;
+		public static final int month_name = 0x7f07008a;
 		public static final int titleDividerTop = 0x7f070072;
 		public static final int abs__action_bar = 0x7f070058;
 		public static final int dropdown = 0x7f070037;
 		public static final int abs__search_plate = 0x7f070063;
-		public static final int title = 0x7f070088;
+		public static final int title = 0x7f070089;
 		public static final int abs__action_mode_close_button = 0x7f07004a;
-		public static final int list_footer = 0x7f0700a4;
+		public static final int list_footer = 0x7f0700a5;
 		public static final int left = 0x7f070020;
 		public static final int listMode = 0x7f070010;
 		public static final int scrollView = 0x7f070078;
 		public static final int end = 0x7f07002a;
 		public static final int abs__progress_circular = 0x7f07001c;
-		public static final int edittext_container = 0x7f0700a1;
+		public static final int edittext_container = 0x7f0700a2;
 		public static final int abs__action_bar_title = 0x7f070046;
-		public static final int hour = 0x7f0700ba;
+		public static final int hour = 0x7f0700bb;
 		public static final int abs__shortcut = 0x7f070055;
 		public static final int abs__action_menu_presenter = 0x7f07001b;
 		public static final int abs__textButton = 0x7f070049;
 		public static final int pagerTag = 0x7f070042;
 		public static final int clip_horizontal = 0x7f070028;
-		public static final int radio = 0x7f07009d;
-		public static final int amPm = 0x7f0700bd;
+		public static final int radio = 0x7f07009e;
+		public static final int amPm = 0x7f0700be;
 		public static final int topPanel = 0x7f070071;
 		public static final int abs__titleDivider = 0x7f070052;
-		public static final int button_bar = 0x7f0700a7;
+		public static final int button_bar = 0x7f0700a8;
 		public static final int abs__expand_activities_button = 0x7f07004c;
 		public static final int abs__submit_area = 0x7f070066;
 		public static final int progress = 0x7f07003a;
-		public static final int headers = 0x7f0700a3;
-		public static final int datePicker = 0x7f07008d;
+		public static final int headers = 0x7f0700a4;
+		public static final int datePicker = 0x7f07008e;
 		public static final int alertTitle = 0x7f070075;
 		public static final int titleDivider = 0x7f070076;
-		public static final int internalEmpty = 0x7f070097;
+		public static final int internalEmpty = 0x7f070098;
 		public static final int normal = 0x7f07000f;
 		public static final int abs__search_go_btn = 0x7f070067;
 		public static final int customPanel = 0x7f07007a;
@@ -1260,37 +1260,37 @@ public final class R {
 		public static final int abs__up = 0x7f070019;
 		public static final int custom = 0x7f07007b;
 		public static final int abs__split_action_bar = 0x7f07005a;
-		public static final int calendar_view = 0x7f070092;
-		public static final int skip_button = 0x7f0700a9;
-		public static final int seekbar = 0x7f0700a2;
+		public static final int calendar_view = 0x7f070093;
+		public static final int skip_button = 0x7f0700aa;
+		public static final int seekbar = 0x7f0700a3;
 		public static final int button2 = 0x7f07007e;
 		public static final int button3 = 0x7f07007f;
 		public static final int abs__list_item = 0x7f07004f;
 		public static final int progress_percent = 0x7f070081;
-		public static final int progressContainer = 0x7f070095;
+		public static final int progressContainer = 0x7f070096;
 		public static final int abs__search_src_text = 0x7f070064;
 		public static final int abs__home = 0x7f070018;
 		public static final int floating = 0x7f070038;
 		public static final int abs__search_mag_icon = 0x7f070062;
-		public static final int day = 0x7f070090;
-		public static final int listContainer = 0x7f070096;
+		public static final int day = 0x7f070091;
+		public static final int listContainer = 0x7f070097;
 		public static final int showCustom = 0x7f070016;
 		public static final int abs__action_mode_bar_stub = 0x7f07005b;
 		public static final int voice = 0x7f07002f;
 		public static final int abs__search_badge = 0x7f07005f;
-		public static final int shortcut = 0x7f07009c;
-		public static final int pickers = 0x7f07008e;
-		public static final int minute = 0x7f0700bc;
-		public static final int prefs = 0x7f0700a6;
+		public static final int shortcut = 0x7f07009d;
+		public static final int pickers = 0x7f07008f;
+		public static final int minute = 0x7f0700bd;
+		public static final int prefs = 0x7f0700a7;
 		public static final int notification = 0x7f07002c;
 		public static final int wrap_content = 0x7f07000e;
-		public static final int numberpicker_input = 0x7f07009e;
+		public static final int numberpicker_input = 0x7f07009f;
 		public static final int abs__title = 0x7f070051;
 		public static final int dialog = 0x7f070036;
-		public static final int timePicker = 0x7f0700b9;
+		public static final int timePicker = 0x7f0700ba;
 		public static final int title_template = 0x7f070073;
-		public static final int button1 = 0x7f070080;
 		public static final int all = 0x7f07002e;
+		public static final int button1 = 0x7f070080;
 		public static final int top = 0x7f07001e;
 		public static final int secondaryProgress = 0x7f07003b;
 		public static final int music = 0x7f070032;
@@ -1298,24 +1298,24 @@ public final class R {
 		public static final int icon = 0x7f070074;
 		public static final int fill_horizontal = 0x7f070025;
 		public static final int beginning = 0x7f070034;
-		public static final int widget_frame = 0x7f0700a0;
+		public static final int widget_frame = 0x7f0700a1;
 		public static final int title_container = 0x7f070083;
 		public static final int tabMode = 0x7f070011;
-		public static final int back_button = 0x7f0700a8;
+		public static final int back_button = 0x7f0700a9;
 		public static final int fill = 0x7f07000d;
 		public static final int abs__search_edit_frame = 0x7f070061;
 		public static final int edit = 0x7f07003c;
 		public static final int clip_vertical = 0x7f070027;
-		public static final int select_dialog_listview = 0x7f0700b2;
+		public static final int select_dialog_listview = 0x7f0700b3;
 		public static final int abs__radio = 0x7f070056;
-		public static final int list = 0x7f07008b;
+		public static final int list = 0x7f07008c;
 		public static final int abs__search_button = 0x7f070060;
 		public static final int message = 0x7f070079;
 		public static final int progress_number = 0x7f070082;
 		public static final int alarm = 0x7f07002d;
-		public static final int checkbox = 0x7f07009b;
-		public static final int left_icon = 0x7f070094;
-		public static final int day_names = 0x7f07008a;
+		public static final int checkbox = 0x7f07009c;
+		public static final int left_icon = 0x7f070095;
+		public static final int day_names = 0x7f07008b;
 	}
 	public static final class style {
 		public static final int Widget_Sherlock_Light_ProgressBar_Horizontal = 0x7f0d0031;
@@ -1677,14 +1677,6 @@ public final class R {
 		public static final int abs__action_menu_item_layout = 0x7f030004;
 		public static final int abs__list_menu_item_radio = 0x7f03000e;
 		public static final int abs__activity_chooser_view_list_item = 0x7f030009;
-<<<<<<< HEAD
-		public static final int preference_child_holo = 0x7f030037;
-		public static final int preference_dialog_edittext = 0x7f030038;
-		public static final int select_dialog_holo = 0x7f030048;
-		public static final int simple_list_item_single_choice = 0x7f030058;
-		public static final int preference_holo = 0x7f03003d;
-		public static final int sherlock_spinner_dropdown_item = 0x7f03004d;
-=======
 		public static final int preference_child_holo = 0x7f03003a;
 		public static final int preference_dialog_edittext = 0x7f03003b;
 		public static final int select_dialog_holo = 0x7f03004b;
@@ -1692,9 +1684,7 @@ public final class R {
 		public static final int preference_holo = 0x7f030040;
 		public static final int sherlock_spinner_dropdown_item = 0x7f030050;
 		public static final int abs__search_dropdown_item_icons_2line = 0x7f030014;
->>>>>>> Added pullToRefresh to ApplicationsView and also an image cache for the image download.
 		public static final int alert_dialog_message = 0x7f03001c;
-		public static final int abs__search_dropdown_item_icons_2line = 0x7f030014;
 		public static final int abs__simple_dropdown_hint = 0x7f030016;
 		public static final int abs__list_menu_item_checkbox = 0x7f03000b;
 		public static final int simple_list_item_multiple_choice = 0x7f03005a;
@@ -1729,8 +1719,8 @@ public final class R {
 		public static final int abs__activitychooserview_choose_application = 0x7f09000f;
 		public static final int date_picker_increment_day_button = 0x7f09001f;
 		public static final int ringtone_default = 0x7f09002a;
-		public static final int abs__share_action_provider_share_with = 0x7f09000e;
 		public static final int abs__action_menu_overflow_description = 0x7f09000a;
+		public static final int abs__share_action_provider_share_with = 0x7f09000e;
 		public static final int number_picker_increment_scroll_mode = 0x7f090029;
 		public static final int abs__searchview_description_submit = 0x7f090015;
 		public static final int ringtone_silent = 0x7f09002c;
@@ -1761,10 +1751,10 @@ public final class R {
 	public static final class bool {
 		public static final int preferences_prefer_dual_pane = 0x7f0a0006;
 		public static final int abs__config_allowActionMenuItemTextWithIcon = 0x7f0a0005;
-		public static final int abs__action_bar_embed_tabs = 0x7f0a0000;
-		public static final int abs__config_showMenuShortcutsWhenKeyboardPresent = 0x7f0a0003;
-		public static final int abs__split_action_bar_is_narrow = 0x7f0a0001;
 		public static final int abs__action_bar_expanded_action_views_exclusive = 0x7f0a0002;
+		public static final int abs__config_showMenuShortcutsWhenKeyboardPresent = 0x7f0a0003;
+		public static final int abs__action_bar_embed_tabs = 0x7f0a0000;
+		public static final int abs__split_action_bar_is_narrow = 0x7f0a0001;
 		public static final int abs__config_actionMenuItemAllCaps = 0x7f0a0004;
 	}
 }

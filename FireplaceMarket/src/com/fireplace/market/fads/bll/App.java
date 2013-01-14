@@ -113,6 +113,10 @@ public class App implements Serializable, Comparable<App> {
 		this.status = status;
 	}
 
+	public static String toResourceName() {
+		return "getdata.php";
+	}
+
 	@Override
 	public boolean equals(Object o) {
 		return ((o instanceof App) && ((App) o).getId() == this.getId());
@@ -132,16 +136,12 @@ public class App implements Serializable, Comparable<App> {
 		return new AppRepository().applicationExists(this);
 	}
 
-	public App save() {
-		return new AppRepository().saveApp(this);
-	}
-
-	public App update() {
-		return new AppRepository().updateApp(this);
-	}
-
 	public App saveOrUpdate() {
 		return new AppRepository().saveOrUpdate(this);
+	}
+
+	public static Boolean saveOrUpdateAll(List<App> appList) {
+		return new AppRepository().saveOrUpdateApps(appList);
 	}
 
 	public App refresh() {

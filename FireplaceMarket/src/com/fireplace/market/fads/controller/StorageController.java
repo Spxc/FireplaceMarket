@@ -16,9 +16,6 @@ import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
 import com.fireplace.market.fads.R;
-import com.fireplace.market.fads.R.id;
-import com.fireplace.market.fads.R.layout;
-import com.fireplace.market.fads.R.menu;
 
 public class StorageController extends FireplaceController {
 
@@ -77,7 +74,7 @@ public class StorageController extends FireplaceController {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		MenuInflater inflater = getSupportMenuInflater();
-		inflater.inflate(R.menu.abs_buttons, menu);
+		inflater.inflate(R.menu.apps_menu, menu);
 		return super.onCreateOptionsMenu(menu);
 	}
 

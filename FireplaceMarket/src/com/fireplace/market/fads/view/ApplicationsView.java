@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.fireplace.market.fads.R;
@@ -18,9 +19,11 @@ import com.fireplace.market.fads.events.EventListener;
 import com.fireplace.market.fads.util.ImageFetcher;
 import com.fireplace.market.fads.viewmodel.ApplicationsModel;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
+import com.handmark.pulltorefresh.library.PullToRefreshBase.Mode;
+import com.handmark.pulltorefresh.library.PullToRefreshBase.OnRefreshListener;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 
-public class ApplicationsView extends PullToRefreshListView {
+public class ApplicationsView extends RelativeLayout {
 
 	/**
 	 * The interface to send events from the view to the controller
@@ -36,7 +39,8 @@ public class ApplicationsView extends PullToRefreshListView {
 	 */
 	private ViewListener viewListener;
 	private final ApplicationsModel model;
-	private TextView mEmptyView;
+	private TextView mEmptyView, searchView;
+	private PullToRefreshListView listView;
 
 	public void setViewListener(ViewListener viewListener) {
 		this.viewListener = viewListener;
@@ -53,38 +57,57 @@ public class ApplicationsView extends PullToRefreshListView {
 	@Override
 	protected void onFinishInflate() {
 		super.onFinishInflate();
-		setOnRefreshListener(new OnRefreshListener<ListView>() {
+		listView = (PullToRefreshListView) findViewById(R.id.pull_to_refresh_listview);
+		listView.setOnRefreshListener(new OnRefreshListener<ListView>() {
 			@Override
 			public void onRefresh(PullToRefreshBase<ListView> refreshView) {
 				viewListener.onListViewRefresh();
 			}
 		});
-		setMode(Mode.BOTH);
+		listView.setMode(Mode.BOTH);
 		model.addListener(ApplicationsModel.ChangeEvent.LIST_REFRESH_COMPLETE,
 				refreshListener);
+		model.addListener(ApplicationsModel.ChangeEvent.SEARCH_DIALOG_CHANGE,
+				searchViewChangeListener);
 		LinearLayout emptyLayout = (LinearLayout) View.inflate(getContext(),
 				R.layout.empty, null);
 		mEmptyView = (TextView) emptyLayout.findViewById(android.R.id.empty);
-		setEmptyView(emptyLayout);
+		listView.setEmptyView(emptyLayout);
+
+		searchView = (TextView) findViewById(R.id.inputSearchApps);
 	}
 
 	public PullToRefreshListView getPullToRefreshListView() {
-		return this;
+		return listView;
 	}
 
 	public void destroy() {
 		model.removeListener(
 				ApplicationsModel.ChangeEvent.LIST_REFRESH_COMPLETE,
 				refreshListener);
+		model.removeListener(
+				ApplicationsModel.ChangeEvent.SEARCH_DIALOG_CHANGE,
+				searchViewChangeListener);
 	}
 
 	private final EventListener refreshListener = new EventListener() {
 		@Override
 		public void onEvent(Event event) {
-			onRefreshComplete();
-			if (getRefreshableView().getAdapter().isEmpty())
+			listView.onRefreshComplete();
+			if (listView.getRefreshableView().getAdapter().isEmpty())
 				mEmptyView.setText(getResources().getString(
 						R.string.no_apps_label));
+		}
+	};
+
+	private final EventListener searchViewChangeListener = new EventListener() {
+		@Override
+		public void onEvent(Event event) {
+			if (model.getIsSearchShowing()) {
+				searchView.setVisibility(View.VISIBLE);
+			} else {
+				searchView.setVisibility(View.GONE);
+			}
 		}
 	};
 
@@ -114,8 +137,7 @@ public class ApplicationsView extends PullToRefreshListView {
 				icon.setImageResource(R.drawable.ic_launcher);
 			}
 
-			TextView title = (TextView) convertView
-					.findViewById(R.id.activity_title);
+			TextView title = (TextView) convertView.findViewById(R.id.label);
 			title.setText(app.getLabel());
 
 			convertView.setOnClickListener(new OnClickListener() {
