@@ -1,10 +1,14 @@
 package com.fireplace.market.fads.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.holoeverywhere.app.AlertDialog;
 
 import android.content.Context;
 import android.content.DialogInterface;
 import android.database.Cursor;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.widget.SimpleCursorAdapter;
 import android.util.Log;
@@ -15,6 +19,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
@@ -25,6 +30,9 @@ import com.fireplace.market.fads.R;
 import com.fireplace.market.fads.R.id;
 import com.fireplace.market.fads.R.layout;
 import com.fireplace.market.fads.R.menu;
+import com.fireplace.market.fads.bll.Repo;
+import com.fireplace.market.fads.bll.SlidingMenuItem;
+import com.fireplace.market.fads.dal.RepoRepository;
 import com.fireplace.market.fads.database.DBAdapter;
 
 public class RepositoriesController extends SherlockFragmentActivity {
@@ -34,6 +42,8 @@ public class RepositoriesController extends SherlockFragmentActivity {
 	private ListView list;
 	EditText txtUrlRepoView;
 	Button btnAddRepo;
+	
+	private Context mContext;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -56,11 +66,26 @@ public class RepositoriesController extends SherlockFragmentActivity {
 		txtUrlRepoView.setVisibility(View.GONE);
 
 		list = (ListView) findViewById(R.id.lvRepos);
+		
 
 		db.open();
 		getRepos();
 	}
 
+	public void getRepoItems(){
+		List<Repo> repoList = Repo.getAll();
+		List<Repo> list = new ArrayList<Repo>();
+		Repo item = new Repo();
+		if(repoList !=null){
+			for (Repo repo : repoList) {
+				item = new Repo();
+				item.setUrl("http://www.url.com");
+				item.setName(repo.getName());
+				list.add(item);
+			}
+		}
+	}
+	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
@@ -106,7 +131,7 @@ public class RepositoriesController extends SherlockFragmentActivity {
 							break;
 						case 1:
 							Log.d("Edit Repo", "Edit repo");
-							// editDialog();
+							editDialog();
 							break;
 						case 2:
 							Log.d("Delete Repo", "Delete repo");
@@ -147,8 +172,8 @@ public class RepositoriesController extends SherlockFragmentActivity {
 		alert.setPositiveButton("Add", new DialogInterface.OnClickListener() {
 			@Override
 			public void onClick(DialogInterface dialog, int whichButton) {
-				long id;
-				id = db.insertTitle(inputAdd.getText().toString());
+				final Cursor cursor = db.getAllTitles();
+				db.insertTitle(inputAdd.getText().toString());
 				Log.d("Add repo", "Added repo " + inputAdd.getText().toString());
 				InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
 				imm.hideSoftInputFromWindow(inputAdd.getWindowToken(), 0);
@@ -180,11 +205,7 @@ public class RepositoriesController extends SherlockFragmentActivity {
 
 		// Set an EditText view to get user input
 
-		final Cursor c = db.getAllTitles();
-		startManagingCursor(c);
-
-		String[] from = new String[] { DBAdapter.KEY_REPOURL };
-		// int[] to = new int[]{R.id.app_name};
+		final Cursor cursor = db.getAllTitles();
 
 		final EditText input = new EditText(this);
 
@@ -193,18 +214,18 @@ public class RepositoriesController extends SherlockFragmentActivity {
 		alert.setPositiveButton("Save", new DialogInterface.OnClickListener() {
 			@Override
 			public void onClick(DialogInterface dialog, int whichButton) {
-				InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-				imm.hideSoftInputFromWindow(input.getWindowToken(), 0);
+				
 				boolean id;
-				if (id = db.updateTitle(c.getLong(1), input.getText()
-						.toString()))
+				if (id = db.updateTitle(cursor.getLong(-1), input.getText().toString()))
 					Log.d("Update DB", "Updated: " + input.getText().toString());
-
 				else
 					Log.d("Update DB", "Update Failed");
+				
 				getRepos();
+				
+				InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+				imm.hideSoftInputFromWindow(input.getWindowToken(), 0);
 			}
-
 		});
 
 		alert.setNegativeButton("Cancel",
