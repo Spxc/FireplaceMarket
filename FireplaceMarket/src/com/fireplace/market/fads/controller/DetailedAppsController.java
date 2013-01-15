@@ -5,6 +5,7 @@ import java.util.HashMap;
 
 import org.taptwo.android.widget.ViewFlow;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.MenuItem;
+import com.fireplace.market.fads.FireplaceApplication;
 import com.fireplace.market.fads.R;
 import com.fireplace.market.fads.R.id;
 import com.fireplace.market.fads.R.layout;
@@ -28,9 +30,19 @@ public class DetailedAppsController extends SherlockFragmentActivity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		Intent intent = getIntent();
+		String appTitle = "";
+		if (intent != null) {
+		    Bundle extras = intent.getExtras();
+		    if (extras != null) {
+		        appTitle = extras.getString(FireplaceApplication.APP_KEY);
+		    }
+		}
+		
 		setContentView(R.layout.viewflow_holder);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-		getSupportActionBar().setTitle("Will be replaced with app name");
+		getSupportActionBar().setTitle(appTitle);
 
 		viewFlow = (ViewFlow) findViewById(R.id.viewflow);
 		DiffAdapter adapter = new DiffAdapter(this);

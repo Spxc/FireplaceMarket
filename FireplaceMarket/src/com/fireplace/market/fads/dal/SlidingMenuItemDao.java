@@ -80,7 +80,7 @@ public class SlidingMenuItemDao {
 		list.add(item);
 
 		item = new SlidingMenuItem();
-		item.setTitle("Manage Repositories");
+		item.setTitle("Repositories");
 		list.add(item);
 
 		List<Repo> repoList = Repo.getAll();

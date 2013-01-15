@@ -52,22 +52,8 @@ public class RepositoriesController extends SherlockFragmentActivity {
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 		getSupportActionBar().setTitle("Repositories");
 
-		btnAddRepo = (Button) findViewById(R.id.btnAddRepo);
-		btnAddRepo.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-			}
-		});
-		btnAddRepo.setText("Add");
-		btnAddRepo.setVisibility(View.GONE);
-
-		txtUrlRepoView = (EditText) findViewById(R.id.txtUrlRepo);
-		txtUrlRepoView.setVisibility(View.GONE);
-
 		list = (ListView) findViewById(R.id.lvRepos);
 		
-
 		db.open();
 		getRepos();
 	}
@@ -102,6 +88,7 @@ public class RepositoriesController extends SherlockFragmentActivity {
 	}
 
 	public void getRepos() {
+		final EditText inputAdd = new EditText(this);
 		final Cursor cursor = db.getAllTitles();
 		startManagingCursor(cursor);
 
@@ -121,7 +108,7 @@ public class RepositoriesController extends SherlockFragmentActivity {
 						+ position + cursor.getString(1));
 				AlertDialog.Builder dia = new AlertDialog.Builder(parent
 						.getContext());
-				dia.setTitle(cursor.getString(1));
+				dia.setTitle("Options");
 				dia.setItems(items, new DialogInterface.OnClickListener() {
 					@Override
 					public void onClick(DialogInterface arg0, int arg1) {
@@ -129,12 +116,23 @@ public class RepositoriesController extends SherlockFragmentActivity {
 						case 0:
 							Log.d("Open Repo", "Open repo");
 							break;
-						case 1:
-							Log.d("Edit Repo", "Edit repo");
-							editDialog();
+						case 1:							
+							AlertDialog.Builder editDialog = new AlertDialog.Builder(RepositoriesController.this); 
+							editDialog.setTitle(cursor.getString(1));
+							editDialog.setMessage(""); 
+							editDialog.setView(inputAdd);
+							editDialog.setPositiveButton("Save", new DialogInterface.OnClickListener() {
+					            public void onClick(DialogInterface dialog, int id) {
+					            	
+					            	Log.d("Save btn","Save btn press");
+					            	db.updateTitle(cursor.getLong(0), inputAdd.getText().toString());
+					            	getRepos();
+					            }
+					        });
+					                editDialog.setNegativeButton("Cancel", null); 
+							editDialog.show(); 
 							break;
 						case 2:
-							Log.d("Delete Repo", "Delete repo");
 							db.deleteTitle(cursor.getLong(0));
 							getRepos();
 							break;
@@ -190,51 +188,6 @@ public class RepositoriesController extends SherlockFragmentActivity {
 						InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
 						imm.hideSoftInputFromWindow(inputAdd.getWindowToken(),
 								0);
-					}
-				});
-
-		alert.show();
-	}
-
-	public void editDialog() {
-
-		AlertDialog.Builder alert = new AlertDialog.Builder(this);
-
-		alert.setTitle("Edit repo");
-		// alert.setMessage("Enter the url of which the software is on!");
-
-		// Set an EditText view to get user input
-
-		final Cursor cursor = db.getAllTitles();
-
-		final EditText input = new EditText(this);
-
-		alert.setView(input);
-		// input.setText(c.getString(1));
-		alert.setPositiveButton("Save", new DialogInterface.OnClickListener() {
-			@Override
-			public void onClick(DialogInterface dialog, int whichButton) {
-				
-				boolean id;
-				if (id = db.updateTitle(cursor.getLong(-1), input.getText().toString()))
-					Log.d("Update DB", "Updated: " + input.getText().toString());
-				else
-					Log.d("Update DB", "Update Failed");
-				
-				getRepos();
-				
-				InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-				imm.hideSoftInputFromWindow(input.getWindowToken(), 0);
-			}
-		});
-
-		alert.setNegativeButton("Cancel",
-				new DialogInterface.OnClickListener() {
-					@Override
-					public void onClick(DialogInterface dialog, int whichButton) {
-						// Canceled.
-						InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-						imm.hideSoftInputFromWindow(input.getWindowToken(), 0);
 					}
 				});
 

@@ -10,7 +10,7 @@ public final class R {
 	public static final class id {
 		public static final int abs__action_bar_container = 0x7f070057;
 		public static final int normal = 0x7f07000f;
-		public static final int slidingmenurowicon = 0x7f0700b8;
+		public static final int slidingmenurowicon = 0x7f0700b6;
 		public static final int abs__search_go_btn = 0x7f070067;
 		public static final int abs__default_activity_button = 0x7f07004e;
 		public static final int homeAsUp = 0x7f070014;
@@ -33,7 +33,7 @@ public final class R {
 		public static final int abs__progress_horizontal = 0x7f07001d;
 		public static final int showHome = 0x7f070013;
 		public static final int fullscreen = 0x7f070044;
-		public static final int slidingmenumain = 0x7f0700b6;
+		public static final int slidingmenumain = 0x7f0700b4;
 		public static final int abs__home = 0x7f070018;
 		public static final int abs__search_src_text = 0x7f070064;
 		public static final int abs__search_mag_icon = 0x7f070062;
@@ -63,8 +63,8 @@ public final class R {
 		public static final int abs__shortcut = 0x7f070055;
 		public static final int abs__action_menu_presenter = 0x7f07001b;
 		public static final int abs__textButton = 0x7f070049;
-		public static final int slidingmenulayout = 0x7f0700b7;
-		public static final int slidingmenurowtitle = 0x7f0700b9;
+		public static final int slidingmenulayout = 0x7f0700b5;
+		public static final int slidingmenurowtitle = 0x7f0700b7;
 		public static final int abs__titleDivider = 0x7f070052;
 		public static final int abs__expand_activities_button = 0x7f07004c;
 		public static final int abs__submit_area = 0x7f070066;

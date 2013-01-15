@@ -207,7 +207,13 @@ public class ApplicationsFragment extends SherlockListFragment {
 		public void onAppClick(App app) {
 			Intent intent = new Intent(mActivity, DetailedAppsController.class);
 			intent.putExtra(FireplaceApplication.APP_KEY, app.getId());
-			startActivity(intent);
+			startActivity(intent); 
+			
+			/**
+			Intent intent = new Intent(mActivity, DetailedAppsController.class);
+			intent.putExtra(FireplaceApplication.APP_KEY, app.getId());
+			startActivity(intent); 
+			**/
 		}
 	};
 
