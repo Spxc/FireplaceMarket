@@ -37,12 +37,13 @@ public class DetailedAppsController extends SherlockFragmentActivity {
 		    Bundle extras = intent.getExtras();
 		    if (extras != null) {
 		        appTitle = extras.getString(FireplaceApplication.APP_KEY);
+		        getSupportActionBar().setTitle(appTitle);
 		    }
 		}
 		
 		setContentView(R.layout.viewflow_holder);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-		getSupportActionBar().setTitle(appTitle);
+		
 
 		viewFlow = (ViewFlow) findViewById(R.id.viewflow);
 		DiffAdapter adapter = new DiffAdapter(this);

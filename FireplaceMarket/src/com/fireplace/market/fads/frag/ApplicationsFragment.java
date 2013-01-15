@@ -206,7 +206,7 @@ public class ApplicationsFragment extends SherlockListFragment {
 		@Override
 		public void onAppClick(App app) {
 			Intent intent = new Intent(mActivity, DetailedAppsController.class);
-			intent.putExtra(FireplaceApplication.APP_KEY, app.getId());
+			intent.putExtra(FireplaceApplication.APP_KEY, app.getLabel());
 			startActivity(intent); 
 			
 			/**
