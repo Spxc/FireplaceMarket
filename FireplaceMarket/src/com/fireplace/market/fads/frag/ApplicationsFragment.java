@@ -205,9 +205,38 @@ public class ApplicationsFragment extends SherlockListFragment {
 
 		@Override
 		public void onAppClick(App app) {
+			
+			/**Intent requestLink = new Intent(mActivity, DetailedAppsController.class);
+
+			Bundle bun = new Bundle();
+			bun.putString("Link", "Test");
+			bun.putString("Search", "STest");
+
+			requestLink.putExtras(bun);
+			startActivity(requestLink); **/
+			
 			Intent intent = new Intent(mActivity, DetailedAppsController.class);
-			intent.putExtra(FireplaceApplication.APP_KEY, app.getLabel());
-			startActivity(intent); 
+			Bundle extras = new Bundle();
+			extras.putString("appIcon", app.getIcon());
+			extras.putString("appName", app.getLabel());
+			extras.putString("appUrl", app.getPath());
+			extras.putString("appDeveloper", app.getDevel());
+			extras.putString("appDescription", app.getDescription());
+			intent.putExtras(extras);
+			startActivity(intent);
+			
+			/**
+			Intent intent = new Intent(mActivity, DetailedAppsController.class);
+			Bundle appInfoBundle = new Bundle();
+			//extras.putString("appIcon", app.getIcon());
+			appInfoBundle.putString("appName", app.getLabel());
+			//extras.putString("appUrl", app.getPath());
+			//extras.putString("appDeveloper", app.getDevel());
+			//extras.putString("appDescription", app.getDescription());
+			//extras.putLong("appId", app.getId()); // Maybe this wont work
+			//extras.putLong("appCategory", app.getPtype());// Maybe this wont work
+			intent.putExtras(appInfoBundle);
+			startActivity(intent); **/ 
 			
 			/**
 			Intent intent = new Intent(mActivity, DetailedAppsController.class);

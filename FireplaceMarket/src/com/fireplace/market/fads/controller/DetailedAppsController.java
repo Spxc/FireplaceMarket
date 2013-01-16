@@ -7,7 +7,9 @@ import org.taptwo.android.widget.ViewFlow;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -31,21 +33,32 @@ public class DetailedAppsController extends SherlockFragmentActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		Intent intent = getIntent();
-		String appTitle = "";
-		if (intent != null) {
-		    Bundle extras = intent.getExtras();
-		    if (extras != null) {
-		        appTitle = extras.getString(FireplaceApplication.APP_KEY);
-		        getSupportActionBar().setTitle(appTitle);
-		    }
-		}
-		
 		setContentView(R.layout.viewflow_holder);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		getSupportActionBar().setTitle("Apps");
+		
+		Bundle extras = getIntent().getExtras();
+		
+		String appName = extras.getString("appName");
+		String appDeveloper = extras.getString("appDeveloper");
+		
+		TextView txtTitle = (TextView) findViewById(R.id.txtAppName);
+		Log.d("Getting: ", appName); //This works so appName isnt null
+		
+		// txtTitle.setText(appName); //This dosent work (getting FC)
+		
+		/**
+		if (txtTitle != null){
+			Log.d("NullPointer Text", "It is not null");
+			
+		}
+		else{
+			Log.d("NullPointer Text", "It is null");
+			txtTitle.setText(appName);
+		} **/
 		
 
-		viewFlow = (ViewFlow) findViewById(R.id.viewflow);
+	viewFlow = (ViewFlow) findViewById(R.id.viewflow);
 		DiffAdapter adapter = new DiffAdapter(this);
 		viewFlow.setAdapter(adapter);
 
