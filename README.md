@@ -5,6 +5,20 @@ Fireplace is going to be a third party application store, it will be like Cydia 
 
 <br>
 
+Todo List:
+=========
+* Add categories
+* Implement Search
+* Get repositories into menu
+* Fix some menu bugs
+* Implement a way we can get all repositories into one list, which includes A-Z slider
+* Some commands in Settings
+* HoloEverywhere bugs
+* Sqlite Bugs
+
+
+<br>
+
 Changelog
 =========
 Commit: 5748c07f311de1a3c99ba87f07bcb5ec0ae02ed0
