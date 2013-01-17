@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
-    
-     <org.taptwo.android.widget.ViewFlow
-    	android:id="@+id/viewflow"
-    	android:layout_width="match_parent"
-    	android:layout_height="match_parent"
-    	 />
-     
-    
-</LinearLayout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+
+<ViewFlipper android:id="@+id/ViewFlipper01" 
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent"
+    >
+    <include android:id="@+id/libraryView1"  layout="@layout/app_details" />
+    <include android:id="@+id/libraryView2"  layout="@layout/comments_details" />
+
+
+</ViewFlipper>
+
+</RelativeLayout>

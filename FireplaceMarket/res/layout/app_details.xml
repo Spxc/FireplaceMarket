@@ -25,15 +25,6 @@
             android:text="Large Text"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
-        <ProgressBar
-            android:id="@+id/progressBar1"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/appIcon" />
-
         <TextView
             android:id="@+id/txtAppDeveloper"
             android:layout_width="wrap_content"
@@ -50,17 +41,28 @@
             android:layout_height="30dp"
             android:layout_above="@+id/progressBar1"
             android:layout_alignParentRight="true"
-            android:text="Button" />
+            android:text="Install"
+            android:textSize="10dp" />
 
         <TextView
             android:id="@+id/txtDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true"
             android:layout_below="@+id/progressBar1"
+            android:layout_marginTop="26dp"
             android:text="Medium Text"
             android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/appIcon"
+            android:layout_marginTop="14dp" />
 
     </RelativeLayout>
 

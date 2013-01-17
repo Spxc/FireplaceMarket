@@ -2980,6 +2980,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int transparent=0x7f0201c2;
     }
     public static final class id {
+        public static final int ViewFlipper01=0x7f0700c2;
         public static final int abs__action_bar=0x7f070058;
         public static final int abs__action_bar_container=0x7f070057;
         public static final int abs__action_bar_subtitle=0x7f070047;
@@ -3022,7 +3023,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int abs__up=0x7f070019;
         public static final int activity_icon=0x7f0700b7;
         public static final int activity_title=0x7f0700b8;
-        public static final int add_repo_button=0x7f0700c3;
+        public static final int add_repo_button=0x7f0700c5;
         public static final int alarm=0x7f07002d;
         public static final int alertTitle=0x7f070073;
         public static final int all=0x7f07002e;
@@ -3035,7 +3036,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int behindLayout=0x7f07008c;
         public static final int both=0x7f070003;
         public static final int bottom=0x7f07001f;
-        public static final int btnInstall=0x7f070086;
+        public static final int btnInstall=0x7f070085;
         public static final int button1=0x7f07007e;
         public static final int button2=0x7f07007c;
         public static final int button3=0x7f07007d;
@@ -3090,6 +3091,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int left=0x7f070020;
         public static final int leftSpacer=0x7f07003d;
         public static final int left_icon=0x7f070099;
+        public static final int libraryView1=0x7f0700c3;
+        public static final int libraryView2=0x7f0700c4;
         public static final int list=0x7f070090;
         public static final int listContainer=0x7f07009b;
         public static final int listMode=0x7f070010;
@@ -3100,7 +3103,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int lvSettings=0x7f07006d;
         public static final int manualOnly=0x7f070004;
         public static final int margin=0x7f070043;
-        public static final int menu_settings=0x7f0700c4;
+        public static final int menu_settings=0x7f0700c6;
         public static final int message=0x7f070077;
         public static final int middle=0x7f070035;
         public static final int minute=0x7f0700c0;
@@ -3118,7 +3121,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int prefs=0x7f0700aa;
         public static final int prefs_frame=0x7f0700a9;
         public static final int progress=0x7f07003a;
-        public static final int progressBar1=0x7f070084;
+        public static final int progressBar1=0x7f070086;
         public static final int progressContainer=0x7f07009a;
         public static final int progress_number=0x7f070080;
         public static final int progress_percent=0x7f07007f;
@@ -3139,7 +3142,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int rotate=0x7f070007;
         public static final int scrollView=0x7f070076;
         public static final int scrollview=0x7f07000b;
-        public static final int search_button=0x7f0700c5;
+        public static final int search_button=0x7f0700c7;
         public static final int secondaryProgress=0x7f07003b;
         public static final int seekbar=0x7f0700a6;
         public static final int select_dialog_listview=0x7f0700b6;
@@ -3167,12 +3170,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int title_template=0x7f070071;
         public static final int top=0x7f07001e;
         public static final int topPanel=0x7f07006f;
-        public static final int txtAppDeveloper=0x7f070085;
+        public static final int txtAppDeveloper=0x7f070084;
         public static final int txtAppName=0x7f070083;
         public static final int txtDescription=0x7f070087;
         public static final int typeface=0x7f07003f;
         public static final int useLogo=0x7f070012;
-        public static final int viewflow=0x7f0700c2;
         public static final int voice=0x7f07002f;
         public static final int webview=0x7f07000a;
         public static final int widget_frame=0x7f0700a4;
