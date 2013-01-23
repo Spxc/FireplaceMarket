@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.os.Environment;
 
 import com.fireplace.market.fads.R;
-import com.fireplace.market.fads.R.layout;
 import com.fireplace.market.fads.bll.ChangeLog;
 
 public class MainController extends FireplaceController {
