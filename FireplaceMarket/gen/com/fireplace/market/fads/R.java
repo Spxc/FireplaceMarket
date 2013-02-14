@@ -3386,6 +3386,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int date_picker_increment_year_button=0x7f090021;
         public static final int date_time_done=0x7f090022;
         public static final int date_time_set=0x7f090023;
+        public static final int error_message_bad_url=0x7f09004d;
+        public static final int error_message_file_not_found=0x7f09004e;
+        public static final int error_message_general=0x7f09004f;
         public static final int hello=0x7f090006;
         public static final int hello_world=0x7f090036;
         public static final int loading=0x7f090024;
@@ -3397,6 +3400,10 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int number_picker_increment_button=0x7f090027;
         public static final int number_picker_increment_scroll_action=0x7f090028;
         public static final int number_picker_increment_scroll_mode=0x7f090029;
+        public static final int progress_dialog_message_prefix_connecting=0x7f09004a;
+        public static final int progress_dialog_message_prefix_downloading=0x7f090049;
+        public static final int progress_dialog_title_connecting=0x7f090048;
+        public static final int progress_dialog_title_downloading=0x7f090047;
         /**  Just use standard Pull Down String when pulling up. These can be set for languages which require it 
          */
         public static final int pull_to_refresh_from_bottom_pull_label=0x7f090003;
@@ -3410,6 +3417,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int ringtone_silent=0x7f09002c;
         public static final int search_label=0x7f090043;
         public static final int skip_button_label=0x7f09002d;
+        public static final int status_text_default=0x7f090046;
         public static final int time_picker_decrement_hour_button=0x7f09002e;
         public static final int time_picker_decrement_minute_button=0x7f09002f;
         public static final int time_picker_decrement_set_am_button=0x7f090030;
@@ -3419,6 +3427,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int time_picker_increment_set_pm_button=0x7f090034;
         public static final int time_picker_separator=0x7f090035;
         public static final int title_activity_main=0x7f090038;
+        public static final int user_message_download_canceled=0x7f09004c;
+        public static final int user_message_download_complete=0x7f09004b;
     }
     public static final class style {
         public static final int AppTheme=0x7f0d00e7;
