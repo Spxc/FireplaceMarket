@@ -14,13 +14,16 @@ Todo List:
 * Implement a way we can get all repositories into one list, which includes A-Z slider
 * Some commands in Settings
 * HoloEverywhere bugs
-* Sqlite Bugs
 
 
 <br>
 
 Changelog
 =========
+Commit: 01e2b9f604949cff7c68ed7890862b84b6173b44
+* Downloading applications now work
+* Install applications now works
+
 Commit: 5748c07f311de1a3c99ba87f07bcb5ec0ae02ed0
 * Fixed repositories
 * Added Sqlite database
